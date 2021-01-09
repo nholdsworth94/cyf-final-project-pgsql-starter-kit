@@ -9,17 +9,28 @@ import { useEffect, useState } from "react";
  //const lessons = fakeLessons.lessons;
 const UpcomingLessons =({RolesButtonHandler})=>{
  const [lessons, setLessons] = useState([]);
-
+ const [school, setSchool] = useState([]);
 	useEffect(() => {
-		fetchData();
+    fetchData();
+    fetchSchool();
 	}, []);
 
 	const fetchData = async () => {
 		try {
-			const response = await fetch('https://cyf-finalproject-class-planner.herokuapp.com/api/lesson');
+			const response = await fetch('http://localhost:3000/api/lesson');
 			const data = await response.json();
 			console.log(data.data);
 			setLessons(data.data);
+		} catch (error) {
+			console.log(error.message);
+		}
+  };
+  const fetchSchool = async () => {
+		try {
+			const response = await fetch('http://localhost:3000/api/school');
+			const data = await response.json();
+			console.log(data.data);
+			setSchool(data.data);
 		} catch (error) {
 			console.log(error.message);
 		}
@@ -33,9 +44,9 @@ const UpcomingLessons =({RolesButtonHandler})=>{
     Choose Cohort
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#">Westmidlands Class 1</a>
-    <a class="dropdown-item" href="#">Westmidlands Class 2</a>
-    <a class="dropdown-item" href="#">Westmidlands Class 3</a>
+    {school.map(el =>
+    <a class="dropdown-item" href="#">{el.name}</a>
+    )}
   </div>
 </div>
       <div className="ULPage">
