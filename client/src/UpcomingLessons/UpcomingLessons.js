@@ -16,7 +16,7 @@ const UpcomingLessons =({RolesButtonHandler})=>{
 
 	const fetchData = async () => {
 		try {
-			const response = await fetch('http://localhost:3000/api/lesson');
+			const response = await fetch('/api/lesson');
 			const data = await response.json();
 			console.log(data.data);
 			setLessons(data.data);
