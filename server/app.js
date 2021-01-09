@@ -15,9 +15,6 @@ app.use(express.json());
 app.use(helmet());
 app.use(logErrors());
 app.use(morgan("dev"));
-app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin": "*")
-}) 
 
 if (app.get("env") === "production") {
 	app.enable("trust proxy");
