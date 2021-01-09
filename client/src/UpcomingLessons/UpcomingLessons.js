@@ -16,7 +16,7 @@ const UpcomingLessons =({RolesButtonHandler})=>{
 
 	const fetchData = async () => {
 		try {
-			const response = await fetch('/lesson');
+			const response = await fetch('https://cyf-finalproject-class-planner.herokuapp.com/api/school');
 			const data = await response.json();
 			console.log(data.data);
 			setLessons(data.data);
