@@ -23,7 +23,7 @@ const UpcomingLessons =({IdHandler})=>{
   </div>
 </div>
       <div className="ULPage">
-        <h3 className="mt-0"><strong>Upcoming Classes</strong></h3>
+        <h3 className="mt-0"><strong>Upcoming Lessons</strong></h3>
   <table>
     <thead>
     <tr>
