@@ -8,9 +8,10 @@ import { httpsOnly, logErrors, pushStateRouting } from "./middleware";
 
 const apiRoot = "/api";
 const staticDir = path.join(__dirname, "static");
-
+const bodyParser = require("body-parser");
 const app = express();
-
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 app.use(express.json());
 app.use(helmet());
 app.use(logErrors());
