@@ -20,15 +20,6 @@ import CreateRoles from "./AdminPage/CreateRoles";
 import Main from "./Main/Main";
 export function App() {
 
-	const [viewRolesButtonClicked, setViewRolesButtonClicked] = useState(false);
-	const [lessonId, setLessonId] = useState();
-  const RolesButtonHandler = (id) =>{
-		setViewRolesButtonClicked(true);
-    	setLessonId(id);
-    } 
-
-
-
 	const [message, setMessage] = useState("Loading...");
 
 	useEffect(() => {
@@ -38,27 +29,11 @@ export function App() {
 	return (
 		<main role="main">
 	<div>
-			{/*	 {!viewRolesButtonClicked? (<UpcomingLessons RolesButtonHandler={RolesButtonHandler}/>) : null}
-				  {viewRolesButtonClicked? (<LessonPage lessonId={lessonId}/>) : null}
-	*/}
-
-	{/*	 {!viewRolesButtonClicked? (<AdminPage RolesButtonHandler={RolesButtonHandler}/>) : null}
-				  {viewRolesButtonClicked? (<CreateClassPage lessonId={lessonId}/>) : null}
-*/}
-       <Main/>
-	 
+		
+        <Main/> 
 	  
 			</div>
-
-   
-
-	
-
-    
-	
-
-	
-			
+		
 		</main>
 	);
 }

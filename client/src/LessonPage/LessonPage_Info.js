@@ -7,7 +7,6 @@ const LessonPage_Info = () => {
       <ul className="list-unstyled bg-light row my-2 mx-3">
         <div className="col mx-2 my-2">
         <li><strong>Module: </strong><span>HTML - CSS</span></li>
-        
         <li><strong>Date: </strong><span>12-01-2020</span></li>
         <li><strong>Material: </strong><span><a href="https://syllabus.codeyourfuture.io/html-css/week-1/lesson" target="_blank">https://syllabus.codeyourfuture.io/html-css/week-1/lesson</a></span></li>
         </div>

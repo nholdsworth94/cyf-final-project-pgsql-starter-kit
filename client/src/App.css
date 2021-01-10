@@ -238,15 +238,15 @@ tbody tr{
 table{
  height:50vh;              
 }
-tbody{
+ tbody{
   padding: 5px;
-  overflow-y: scroll;    
-  overflow-x: hidden;             
+    overflow-y: scroll;   
+   overflow-x: hidden;            
   width: 82%;
-  position: absolute;
+  /* position: absolute; */
   font-weight: 500;
   height: 50vh;
-}
+} 
 tbody tr :first-child {
    text-align: center;
 }

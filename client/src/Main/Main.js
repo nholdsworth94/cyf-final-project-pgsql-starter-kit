@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState, Component } from 'react';
 import { BrowserRouter as Router, Route ,Switch} from 'react-router-dom';
 
 import AdminPage from '../AdminPage/AdminPage';
@@ -10,6 +10,13 @@ import UpcomingLessons from '../UpcomingLessons/UpcomingLessons';
 import LessonPage from '../LessonPage/LessonPage';
 
 const Main = () => {
+
+	const [lessonId, setLessonId] = useState();
+  const IdHandler = (id) =>{
+    	setLessonId(id);
+    } 
+
+
   return (
  
     <Switch> {/* The Switch decides which component to show based on the current URL.*/}
@@ -18,8 +25,8 @@ const Main = () => {
       <Route exact path='/CreateClassPage' component={CreateClassPage}></Route>
       <Route exact path='/LogInPage' component={LogInPage}></Route>
       <Route exact path='/RegisterPage' component={RegisterPage}></Route>
-      <Route exact path='/UpcomingLessons' component={UpcomingLessons}></Route>
-      <Route exact path='/LessonPage' component={LessonPage}></Route>
+      <Route exact path='/UpcomingLessons' render={() => <UpcomingLessons IdHandler={IdHandler}/>}></Route>
+      <Route exact path='/LessonPage' render={() => <LessonPage lessonId={lessonId}/>}></Route>
     </Switch>
   );
 }
