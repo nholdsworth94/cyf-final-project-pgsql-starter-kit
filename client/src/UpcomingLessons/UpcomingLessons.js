@@ -4,10 +4,37 @@ import LessonsTable from "./LessonsTable"
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 
- const lessons = fakeLessons.lessons;
-const UpcomingLessons =({IdHandler})=>{
- 
+ //const lessons = fakeLessons.lessons;
+const UpcomingLessons =({RolesButtonHandler})=>{
+ const [lessons, setLessons] = useState([]);
+ const [school, setSchool] = useState([]);
+	useEffect(() => {
+    fetchData();
+    fetchSchool();
+	}, []);
+
+	const fetchData = async () => {
+		try {
+			const response = await fetch('https://cyf-finalproject-class-planner.herokuapp.com/api/lesson');
+			const data = await response.json();
+			console.log(data.data);
+			setLessons(data.data);
+		} catch (error) {
+			console.log(error.message);
+		}
+  };
+  const fetchSchool = async () => {
+		try {
+			const response = await fetch('https://cyf-finalproject-class-planner.herokuapp.com/api/school');
+			const data = await response.json();
+			console.log(data.data);
+			setSchool(data.data);
+		} catch (error) {
+			console.log(error.message);
+		}
+	};
 
     return(
       <div>
@@ -17,13 +44,13 @@ const UpcomingLessons =({IdHandler})=>{
     Choose Cohort
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#">Westmidlands Class 1</a>
-    <a class="dropdown-item" href="#">Westmidlands Class 2</a>
-    <a class="dropdown-item" href="#">Westmidlands Class 3</a>
+    {school.map(el =>
+    <a class="dropdown-item" href="#">{el.name}</a>
+    )}
   </div>
 </div>
       <div className="ULPage">
-        <h3 className="mt-0"><strong>Upcoming Lessons</strong></h3>
+        <h3 className="mt-0"><strong>Upcoming Classes</strong></h3>
   <table>
     <thead>
     <tr>
@@ -38,7 +65,7 @@ const UpcomingLessons =({IdHandler})=>{
   <tbody className="firstRow">
     {lessons.map(el =>
   
-<LessonsTable el={el} IdHandler={IdHandler}/>
+<LessonsTable el={el} RolesButtonHandler={RolesButtonHandler}/>
   
   
      

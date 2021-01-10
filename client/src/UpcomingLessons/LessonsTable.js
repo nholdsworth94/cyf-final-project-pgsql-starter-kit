@@ -3,20 +3,20 @@ import moment from 'moment';
 import { Link } from "react-router-dom";
 
 
-const LessonsTable = ({el,IdHandler}) =>{
+const LessonsTable = ({el,RolesButtonHandler}) =>{
     
- const currentDate = moment().format("DD MM YY");
+ const currentDate = moment(el.date).format("DD-MM-YY");
    
 
    return(
    
 <tr>
       <td>{el.id}</td>
-      <td>{el.module}</td>
-      <td>{el.Lesson}</td>
-      <td>{el.Date}</td>
-      <td>{el.Time}</td>
-      <td><Link to="/LessonPage"><button type="button" class="nav_Home rolesBTN"  onClick={()=>IdHandler(el.id)}>View Vacancies</button></Link></td> 
+      <td>{el.name}</td>
+      <td>{el.week_number}</td>
+      <td>{currentDate}</td>
+      <td>{el.time}</td>
+      <td><Link to="/LessonPage"><button type="button" class="nav_Home rolesBTN"  onClick={()=>RolesButtonHandler(el.id)}>View Vacancies</button></Link></td> 
     </tr>
         
 

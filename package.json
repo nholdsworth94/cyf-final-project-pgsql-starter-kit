@@ -15,7 +15,8 @@
     "lint": "eslint .",
     "preserve": "npm run build",
     "serve": "npm start",
-    "start": "node dist/server.js"
+    "start": "node dist/server.js",
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "repository": {
     "type": "git",
