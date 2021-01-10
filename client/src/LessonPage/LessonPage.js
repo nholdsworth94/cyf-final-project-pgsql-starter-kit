@@ -15,7 +15,6 @@ const LessonPage = ({lessonId}) => {
         <div className="App">
             <Header />
             <LessonPage_Info />
-            <h1>Lesson id: {lessonId}</h1>
             <SigningUpTable />
             <Footer />
         </div>
