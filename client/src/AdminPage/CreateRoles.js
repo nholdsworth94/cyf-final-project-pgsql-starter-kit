@@ -6,7 +6,7 @@ const CreateRoles = () =>{
 
     return (
     <div className="row-10 ">
-        <h4 className="container col-8 my-1 mt-1"><strong>Create a new class</strong></h4>
+        <h5 className="container col-10 text-left"><strong>Create a new class</strong></h5>
             <form class=" container col-10 mt-1" method="POST" action="https://cyf-finalproject-class-planner.herokuapp.com/api/CreateClass">
               <div className="form-inline ">
                 <div class="form-group mx-1 mb-1">
@@ -22,6 +22,7 @@ const CreateRoles = () =>{
 </datalist>
   </div>
   <div>
+    <div class="form-group mx-1 mb-1">
   <label class="m-1 "> Module</label>
 <input list="modules"  class="form-control col-11" name="module" placeholder="Module" />
 <datalist id="modules">
@@ -39,6 +40,7 @@ const CreateRoles = () =>{
   <option value="MongoDB"/>
   <option value="Final Projects"/>
 </datalist>
+  </div>
   </div>
       <div class="form-group mx-1 mb-1">
     <label class="m-1 "> Lesson</label>
@@ -70,7 +72,7 @@ const CreateRoles = () =>{
     <input type="time" class="form-control col-12" name="endTime" placeholder="End Time"/>
   </div>
   </div>
-  <h4 className=" text-left "><strong>Roles:</strong></h4>
+  <h5 className=" text-left "><strong>Roles:</strong></h5>
 <div className="row ">
   
       <div className="col-5 ">
