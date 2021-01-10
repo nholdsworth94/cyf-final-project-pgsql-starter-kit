@@ -226,7 +226,7 @@ router.post("/CreateClass", async (req, res) => {
 		 let zoomMasterQuantity = req.body.zoomMasterQuantity;
 		 let personalDevelopment = req.body.personalDevelopment;
 		 let personalDevelopmentQuantity = req.body.personalDevelopmentQuantity;
-	 	res.status(200).json({
+	 {/*	res.status(200).json({
 			status: "success",
 			cohort: `${cohort}`,
 			lesson: `${lesson}`,
@@ -247,9 +247,9 @@ router.post("/CreateClass", async (req, res) => {
 			zoomMasterQuantity:`${zoomMasterQuantity}`,
 			personalDevelopment:`${personalDevelopment}`,
 			personalDevelopmentQuantity:`${personalDevelopmentQuantity}`
-		});
-		{/* 	const results = await pool.query(
-			'SELECT * FROM cohort_lesson_user_link'
+		});*/}
+		 	const results = await pool.query(
+			'INSERT INTO module (name, syllabus_link) VALUES ($1,$2)',[module,material]
 		);
 
 		res.status(200).json({
@@ -257,8 +257,6 @@ router.post("/CreateClass", async (req, res) => {
 			results: results.rows.length,
 			data: results.rows,
 		});
-		*/}
-
 	} catch (error) {
 		console.log(error.message);
 	}
