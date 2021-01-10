@@ -160,7 +160,7 @@ router.get("/cohort_lesson_user_link", async (req, res) => {
 });
 
 
-router.post("/LogInPage", async (req, res) => {
+router.post("/login", async (req, res) => {
 	try { let email = req.body.email;
   console.log(`\nemail: ${typeof email}`);
   console.log(`${email}`);
@@ -177,6 +177,33 @@ router.post("/LogInPage", async (req, res) => {
 		console.log(error.message);
 	}
 });
+
+router.post("/register", async (req, res) => {
+	try {  let fname = req.body.fname;
+  console.log(`\nfname: ${typeof fname}`);
+  console.log(`${fname}`);
+  let lname = req.body.lname;
+  console.log(`\nlname: ${typeof lname}`);
+  console.log(`${lname}`);
+		let email = req.body.email;
+  console.log(`\nemail: ${typeof email}`);
+  console.log(`${email}`);
+  let password = req.body.password;
+  console.log(`\npassword: ${typeof password}`);
+  console.log(`${password}`);
+		
+		res.status(200).json({
+			status: "success",
+			fname: `${fname}`,
+			lname: `${lname}`,
+			email: `${email}`,
+			password: `${password}`
+		});
+	} catch (error) {
+		console.log(error.message);
+	}
+});
+
 
 router.post("/CreateClass", async (req, res) => {
 	try { 
