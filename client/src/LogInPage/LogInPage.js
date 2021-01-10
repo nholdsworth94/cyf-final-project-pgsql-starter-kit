@@ -17,7 +17,7 @@ const LogInPage = () => {
 <div className="form">
   
   <form className="login-form" method="POST" action="https://cyf-finalproject-class-planner.herokuapp.com/api/login">
-    <input type="text" placeholder="email" name="login"/>
+    <input type="text" placeholder="email" name="email"/>
     <input type="password" placeholder="password" name="password"/>
     
     <button type="submit" value="submit">login</button>
