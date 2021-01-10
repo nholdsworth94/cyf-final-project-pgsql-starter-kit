@@ -251,7 +251,10 @@ router.post("/CreateClass", async (req, res) => {
 		 	const results = await pool.query(
 			"INSERT INTO cohort (name, start_date, end_date, school_id, created_by) VALUES ($1,'2021/10/01','2022/10/01',1,1)",[cohort]);
 			const result1 = await pool.query(
-			"INSERT INTO module (name, syllabus_link) VALUES ($1,$2)",[module,material]);
+			"INSERT INTO module (name, syllabus_link) VALUES ($1,'test')",[module]);
+			const result2 = await pool.query(
+			 "INSERT INTO lesson (week_number, content, syllabus_link , module_id, date,starttime,endtime ) VALUES ($1,'test',$2,1, $3,$4,$5)",
+			 [lesson,material,date,startTime,endTime]);
 
 		res.status(200).json({
 			status: "success",
