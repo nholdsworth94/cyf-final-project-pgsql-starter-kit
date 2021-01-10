@@ -70,39 +70,38 @@ const CreateRoles = () =>{
     <input type="time" class="form-control col-12" name="endTime" placeholder="End Time"/>
   </div>
   </div>
-  <h4 className="container text-left "><strong>Roles:</strong></h4>
-  <label class="form-check-label inline mr-5 col-12 text-right " for="quantity"> Needed &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Needed </label>
-<div className="row  ml-4">
+  <h4 className=" text-left "><strong>Roles:</strong></h4>
+<div className="row ">
   
-      <div className="col mx-4">
+      <div className="col-5 ">
                 <div class="form-check ">
    <label class="form-check-label col-7" for="inlineRadio1">Lead Teacher</label>
     
-  <input class="ml-3 " type="number" id="quantity" name="leadTeacherQuantity" min="1" max="10"></input>
+  <input class=" col-4" type="number" id="quantity" name="leadTeacherQuantity" min="0" max="10" placeholder="quantity"></input>
 </div>
       <div class="form-check">
   <label class="form-check-label col-7" for="inlineRadio1">Assistant Lead Teacher</label>
-  <input class="ml-3 " type="number" id="quantity" name="assistantLeadTeacherQuantity" min="1" max="10"></input>
+  <input class=" col-4" type="number" id="quantity" name="assistantLeadTeacherQuantity" min="0" max="10" placeholder="quantity"></input>
 </div>
       <div class="form-check">
   <label class="form-check-label col-7" for="inlineRadio1">Teaching Assistant</label>
-  <input class="ml-3 " type="number" id="quantity" name="teachingAssistantQuantity" min="1" max="10"></input>
+  <input class=" col-4" type="number" id="quantity" name="teachingAssistantQuantity" min="0" max="10" placeholder="quantity"></input>
 </div>
      
 </div>
 
- <div className="col">
+ <div className="col-5">
    <div class="form-check">
-  <label class="form-check-label col-9" for="inlineRadio1">Coordinator</label>
-  <input class="ml-3 " type="number" id="quantity" name="coordinatorQuantity" min="1" max="10"></input>
+  <label class="form-check-label col-8" for="inlineRadio1">Coordinator</label>
+  <input class=" col-4" type="number" id="quantity" name="coordinatorQuantity" min="0" max="10" placeholder="quantity"></input>
 </div>
  <div class="form-check">
-  <label class="form-check-label col-9" for="inlineRadio1">Zoom Master (Host)</label>
-  <input class="ml-3 " type="number" id="quantity" name="zoomMasterQuantity" min="1" max="10"></input>
+  <label class="form-check-label col-8" for="inlineRadio1">Zoom Master (Host)</label>
+  <input class=" col-4" type="number" id="quantity" name="zoomMasterQuantity" min="0" max="10" placeholder="quantity"></input>
 </div>
-      <div class="form-check">
-  <label class="form-check-label col-9" for="inlineRadio1">Personal Development Rep</label>
-  <input class="ml-3 " type="number" id="quantity" name="personalDevelopmentQuantity" min="1" max="10"></input>
+      <div class="form-check ">
+  <label class="form-check-label col-8" for="inlineRadio1">Personal Development Rep</label>
+  <input class=" col-4" type="number" id="quantity" name="personalDevelopmentQuantity" min="0" max="10" placeholder="quantity"></input>
 </div>
       
       
