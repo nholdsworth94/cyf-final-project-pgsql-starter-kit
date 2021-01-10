@@ -159,4 +159,82 @@ router.get("/cohort_lesson_user_link", async (req, res) => {
 	}
 });
 
+
+router.post("/LogInPage", async (req, res) => {
+	try { let email = req.body.email;
+  console.log(`\nemail: ${typeof email}`);
+  console.log(`${email}`);
+  let password = req.body.password;
+  console.log(`\npassword: ${typeof password}`);
+  console.log(`${password}`);
+		
+		res.status(200).json({
+			status: "success",
+			email: `${email}`,
+			password: `${password}`
+		});
+	} catch (error) {
+		console.log(error.message);
+	}
+});
+
+router.post("/CreateClass", async (req, res) => {
+	try { 
+		let cohort = req.body.cohort;
+ 		 let lesson = req.body.lesson;
+		 let date = req.body.date;
+		 let module = req.body.module;
+		 let material = req.body.material;
+		 let startTime = req.body.startTime;
+		 let endTime = req.body.endTime;
+		 let leadTeacher = req.body.leadTeacher;
+		 let leadTeacherQuantity = req.body.leadTeacherQuantity;
+		 let assistantLeadTeacher = req.body.assistantLeadTeacher;
+		 let assistantLeadTeacherQuantity = req.body.assistantLeadTeacherQuantity;
+		 let teachingAssistant = req.body.teachingAssistant;
+		 let teachingAssistantQuantity = req.body.teachingAssistantQuantity;
+		 let coordinator = req.body.coordinator;
+		 let coordinatorQuantity = req.body.coordinatorQuantity;
+		 let zoomMaster = req.body.zoomMaster;
+		 let zoomMasterQuantity = req.body.zoomMasterQuantity;
+		 let personalDevelopment = req.body.personalDevelopment;
+		 let personalDevelopmentQuantity = req.body.personalDevelopmentQuantity;
+	 	res.status(200).json({
+			status: "success",
+			cohort: `${cohort}`,
+			lesson: `${lesson}`,
+			date: `${date}`,
+			module: `${module}`,
+			material: `${material}`,
+			startTime: `${startTime}`,
+			endTime: `${endTime}`,
+			leadTeacher:`${leadTeacher}`,
+			leadTeacherQuantity:`${leadTeacherQuantity}`,
+			assistantLeadTeacher:`${assistantLeadTeacher}`,
+			assistantLeadTeacherQuantity:`${assistantLeadTeacherQuantity}`,
+			teachingAssistant:`${teachingAssistant}`,
+			teachingAssistantQuantity:`${teachingAssistantQuantity}`,
+			coordinator:`${coordinator}`,
+			coordinatorQuantity:`${coordinatorQuantity}`,
+			zoomMaster:`${zoomMaster}`,
+			zoomMasterQuantity:`${zoomMasterQuantity}`,
+			personalDevelopment:`${personalDevelopment}`,
+			personalDevelopmentQuantity:`${personalDevelopmentQuantity}`
+		});
+		{/* 	const results = await pool.query(
+			'SELECT * FROM cohort_lesson_user_link'
+		);
+
+		res.status(200).json({
+			status: "success",
+			results: results.rows.length,
+			data: results.rows,
+		});
+		*/}
+
+	} catch (error) {
+		console.log(error.message);
+	}
+});
+
 export default router;
