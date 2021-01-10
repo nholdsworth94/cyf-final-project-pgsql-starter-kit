@@ -16,11 +16,11 @@ const LogInPage = () => {
 
 <div className="form">
   
-  <form className="login-form">
-    <input type="text" placeholder="email"/>
-    <input type="password" placeholder="password"/>
+  <form className="login-form" method="Post" action="https://cyf-finalproject-class-planner.herokuapp.com/api/login">
+    <input type="text" placeholder="email" name="login"/>
+    <input type="password" placeholder="password" name="password"/>
     <Link to="/UpcomingLessons">
-    <button>login</button>
+    <button type="submit" value="submit">login</button>
    </Link>
      <p className="messageForgot"> <a href="#">Forgot password?</a></p>
     <p className="message">Don't have an account? <a href="#">Create an account</a></p>
