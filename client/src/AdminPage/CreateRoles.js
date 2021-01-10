@@ -7,7 +7,7 @@ const CreateRoles = () =>{
     return (
     <div className="row-10 ">
         <h4 className="container col-8 my-1 mt-1"><strong>Create a new class</strong></h4>
-            <form class=" container col-10 mt-1" method="POST" action="http://localhost:3000/api/CreateClass">
+            <form class=" container col-10 mt-1" method="POST" action="https://cyf-finalproject-class-planner.herokuapp.com/api/CreateClass">
               <div className="form-inline ">
                 <div class="form-group mx-1 mb-1">
     <label class="m-1 "> Cohort</label>
