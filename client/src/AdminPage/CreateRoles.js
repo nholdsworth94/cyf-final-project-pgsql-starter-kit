@@ -76,18 +76,15 @@ const CreateRoles = () =>{
   
       <div className="col mx-4">
                 <div class="form-check ">
-  <input class="form-check-input position-static" type="checkbox" name="leadTeacher"  value="Lead Teacher" aria-label="..."/>
    <label class="form-check-label col-7" for="inlineRadio1">Lead Teacher</label>
     
   <input class="ml-3 " type="number" id="quantity" name="leadTeacherQuantity" min="1" max="10"></input>
 </div>
       <div class="form-check">
-  <input class="form-check-input position-static" type="checkbox" name="assistantLeadTeacher"  value="Assistant Lead Teacher" aria-label="..."/>
   <label class="form-check-label col-7" for="inlineRadio1">Assistant Lead Teacher</label>
   <input class="ml-3 " type="number" id="quantity" name="assistantLeadTeacherQuantity" min="1" max="10"></input>
 </div>
       <div class="form-check">
-  <input class="form-check-input position-static" type="checkbox" name="teachingAssistant"  value="Teaching Assistant" aria-label="..."/>
   <label class="form-check-label col-7" for="inlineRadio1">Teaching Assistant</label>
   <input class="ml-3 " type="number" id="quantity" name="teachingAssistantQuantity" min="1" max="10"></input>
 </div>
@@ -96,17 +93,14 @@ const CreateRoles = () =>{
 
  <div className="col">
    <div class="form-check">
-  <input class="form-check-input position-static" type="checkbox" name="coordinator"  value="Coordinator" aria-label="..."/>
   <label class="form-check-label col-9" for="inlineRadio1">Coordinator</label>
   <input class="ml-3 " type="number" id="quantity" name="coordinatorQuantity" min="1" max="10"></input>
 </div>
  <div class="form-check">
-  <input class="form-check-input position-static" type="checkbox" name="zoomMaster" value="Zoom Master (Host)" aria-label="..."/>
   <label class="form-check-label col-9" for="inlineRadio1">Zoom Master (Host)</label>
   <input class="ml-3 " type="number" id="quantity" name="zoomMasterQuantity" min="1" max="10"></input>
 </div>
       <div class="form-check">
-  <input class="form-check-input position-static" type="checkbox" name="personalDevelopment" value="Personal Development Rep" aria-label="..."/>
   <label class="form-check-label col-9" for="inlineRadio1">Personal Development Rep</label>
   <input class="ml-3 " type="number" id="quantity" name="personalDevelopmentQuantity" min="1" max="10"></input>
 </div>
