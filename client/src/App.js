@@ -20,14 +20,15 @@ import CreateRoles from "./AdminPage/CreateRoles";
 import Main from "./Main/Main";
 export function App() {
 
-	const [viewRolesButtonClicked, setViewRolesButtonClicked] = useState(false);
+	{/*const [viewRolesButtonClicked, setViewRolesButtonClicked] = useState(false);
 	const [lessonId, setLessonId] = useState();
   const RolesButtonHandler = (id) =>{
 		setViewRolesButtonClicked(true);
-    	setLessonId(id);
+		setLessonId(id);
+		console.log(lessonId);
     } 
 
-
+*/}
 
 	const [message, setMessage] = useState("Loading...");
 
