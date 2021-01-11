@@ -1,8 +1,7 @@
 import React from "react";
 
 const CreateRoles = () =>{
-
-
+   
 
     return (
     <div className="row-10 ">
@@ -57,7 +56,7 @@ const CreateRoles = () =>{
              
   <div class="form-group ml-2 ">
     <label for="staticEmail2" class="m-1">Date</label>
-    <input type="date" class="form-control col-12" name="date"  placeholder="Date"/>
+    <input type="date" class="form-control col-12" name="date"/>
   </div>
   <div class="form-group ml-5  ">
     <label for="staticEmail2" class="m-1">Material</label>
@@ -65,11 +64,12 @@ const CreateRoles = () =>{
   </div>
   <div class="form-group  col-2">
     <label for="staticEmail2" class="m-1">Start Time</label>
-    <input type="time" class="form-control col-12" name="startTime" placeholder="Start Time"/>
+    <input type="time" class="form-control col-12" name="startTime" placeholder="Start Time" defaultValue="11:00"/>
+  
   </div>
   <div class="form-group   col-2">
     <label for="staticEmail2" class="m-1">End Time</label>
-    <input type="time" class="form-control col-12" name="endTime" placeholder="End Time"/>
+    <input type="time" class="form-control col-12" name="endTime" placeholder="End Time" defaultValue="17:00"/>
   </div>
   </div>
   <h5 className=" text-left "><strong>Roles:</strong></h5>
