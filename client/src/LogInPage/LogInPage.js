@@ -19,9 +19,9 @@ const LogInPage = () => {
   <form className="login-form" method="POST" action="https://cyf-finalproject-class-planner.herokuapp.com/api/login">
     <input type="text" placeholder="email" name="email"/>
     <input type="password" placeholder="password" name="password"/>
-    
+    <Link to="/UpcomingLessons">
     <button type="submit" value="submit">login</button>
-   
+   </Link>
      <p className="messageForgot"> <a href="#">Forgot password?</a></p>
     <p className="message">Don't have an account? <a href="#">Create an account</a></p>
   </form>

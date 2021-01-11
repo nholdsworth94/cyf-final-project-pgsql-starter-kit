@@ -15,7 +15,7 @@ const LessonsTable = ({el,RolesButtonHandler}) =>{
       <td>{el.name}</td>
       <td>{el.week_number}</td>
       <td>{currentDate}</td>
-      <td>{el.time}</td>
+      <td>{el.starttime+"-"+el.endtime}</td>
       <td><Link to="/LessonPage"><button type="button" class="nav_Home rolesBTN"  onClick={()=>RolesButtonHandler(el.id)}>View Vacancies</button></Link></td> 
     </tr>
         
