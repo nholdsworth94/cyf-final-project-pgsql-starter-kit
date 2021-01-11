@@ -3,7 +3,7 @@ import moment from 'moment';
 import { Link } from "react-router-dom";
 
 
-const LessonsTable = ({el,RolesButtonHandler}) =>{
+const LessonsTable = ({el}) =>{
     
  const currentDate = moment(el.date).format("DD-MM-YY");
    
@@ -16,7 +16,12 @@ const LessonsTable = ({el,RolesButtonHandler}) =>{
       <td>{el.week_number}</td>
       <td>{currentDate}</td>
       <td>{el.starttime+"-"+el.endtime}</td>
-      <td><Link to="/LessonPage"><button type="button" class="nav_Home rolesBTN"  onClick={()=>RolesButtonHandler(el.id)}>View Vacancies</button></Link></td> 
+      <td><Link to={{ pathname: "/LessonPage", state:{id:el.id,
+lesson:el.week_number,
+date:currentDate,
+time:`${el.starttime}-${el.endtime}`,
+module:el.name,
+link:el.syllabus_link }  }}><button type="button" class="nav_Home rolesBTN"  >View Vacancies</button></Link></td> 
     </tr>
         
 
