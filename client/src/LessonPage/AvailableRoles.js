@@ -1,6 +1,6 @@
 import React from "react";
 
-const AvailableRoles = () =>{
+const AvailableRoles = ({lessonId}) =>{
     return (
     <div className="row-10">
         <h4 className="container col-8 my-2"><strong>Available Roles:</strong></h4>
@@ -44,6 +44,7 @@ const AvailableRoles = () =>{
   <div class="form-group mx-2 mb-2">
     <label for="staticEmail2" class="sr-only">Email</label>
     <input type="text" class="form-control" placeholder="Email" name="email"/>
+    <input type="hidden" name="lesson_id" value={lessonId}/>
   </div>
   <button type="submit" value="submit" class="btn btn-danger mx-2 mb-2">Class Sign Up</button>
   </div>
