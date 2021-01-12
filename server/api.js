@@ -284,7 +284,7 @@ router.post("/CreateClass", async (req, res) => {
 	}
 });
 
-router.post("/CreateClass", async (req, res) => {
+router.post("/signed_volunteers", async (req, res) => {
 	try { 
 		 let leadTeacher = req.body.leadTeacher;
 		 let assistantLeadTeacher = req.body.assistantLeadTeacher;
