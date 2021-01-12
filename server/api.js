@@ -307,5 +307,25 @@ router.post("/signed_volunteers", async (req, res) => {
 		console.log(error.message);
 	}
 });
+router.get("/signed_volunteers/:lessonId", async (req, res) => {
+	try {
+		 let lesson_id = req.params.lessonId;
+ {/*	 	res.status(200).json({
+			status: "success",
+			role:`${role}`,
+			fullName:`${fullName}`,
+			email:`${email}`
+		});});*/}
+			const results = await pool.query(
+			"SELECT * FROM signed_volunteers  where lesson_id=$1",[lesson_id]);
+		res.status(200).json({
+			status: "success",
+			results: results.rows.length,
+			data: results.rows,
+		});
+	} catch (error) {
+		console.log(error.message);
+	}
+});
 
 export default router;
