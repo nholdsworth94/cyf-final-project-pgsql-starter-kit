@@ -10,14 +10,12 @@ const LessonPage_Info = ({lessonId,lesson,module,time,date,link}) => {
       <ul className="list-unstyled bg-light row my-2 mx-3">
         <div className="col mx-2 my-2">
         <li><strong>Module: </strong><span>{module}</span></li>
-        
         <li><strong>Date: </strong><span>{date}</span></li>
-        <li><strong>Material: </strong><span><a href="https://syllabus.codeyourfuture.io/html-css/week-1/lesson" target="_blank">{link}</a></span></li>
+        <li><strong>Time: </strong><span>{time}</span></li>
         </div>
         <div className="col mx-2 my-2">
-        <li><strong>Lead Teacher: </strong><span>Emile Pafford-Wray</span></li>
-        <li><strong>Time: </strong><span>{time}</span></li>
         <li><strong>Lesson: </strong><span>{lesson}</span></li>
+        <li><strong>Material: </strong><span><a href={link} target="_blank">{link}</a></span></li>
      </div>
       </ul>
     </div>
