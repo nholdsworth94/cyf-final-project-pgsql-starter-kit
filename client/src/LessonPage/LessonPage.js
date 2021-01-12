@@ -24,7 +24,7 @@ const LessonPage = () => {
         <div className="App">
             <Header />
             <LessonPage_Info lessonId={lessonId} lesson={lesson} module={module} time={time} date={date} link={link}/>
-            <AvailableRoles/>
+            <AvailableRoles lessonId={lessonId}/>
             <LessonPage_Volunteers />
             <Footer />
         </div>
