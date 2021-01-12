@@ -11,10 +11,9 @@ const VolunteersTable = ({el,RolesButtonHandler}) =>{
    
 <tr>
       <td>{el.id}</td>
-      <td>{el.module}</td>
-      <td>{el.Lesson}</td>
-      <td>{el.Date}</td>
-      <td>{el.Time}</td>
+      <td>{el.full_name}</td>
+      <td>{el.email}</td>
+      <td>{el.role_id}</td>
       <td><button type="button" class="nav_Home rolesBTN"  onClick={()=>RolesButtonHandler(el.id)}>View Details</button></td> 
     </tr>
         
