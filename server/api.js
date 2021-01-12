@@ -289,6 +289,7 @@ router.post("/signed_volunteers", async (req, res) => {
 		 let role = req.body.role;
 		 let fullName = req.body.fullName;
 		 let email = req.body.email;
+		 let lesson_id = req.body.lesson_id;
  {/*	 	res.status(200).json({
 			status: "success",
 			role:`${role}`,
@@ -296,7 +297,7 @@ router.post("/signed_volunteers", async (req, res) => {
 			email:`${email}`
 		});});*/}
 			const results = await pool.query(
-			"INSERT INTO signed_volunteers (full_name, email, role_id, lesson_id) VALUES ($1,$2,$3,1)",[fullName,email,role]);
+			"INSERT INTO signed_volunteers (full_name, email, role_id, lesson_id) VALUES ($1,$2,$3,$4)",[fullName,email,role,lesson_id]);
 		res.status(200).json({
 			status: "success",
 			results: results.rows.length,
