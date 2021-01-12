@@ -286,20 +286,14 @@ router.post("/CreateClass", async (req, res) => {
 
 router.post("/signed_volunteers", async (req, res) => {
 	try { 
-		 let leadTeacher = req.body.leadTeacher;
-		 let assistantLeadTeacher = req.body.assistantLeadTeacher;
-		 let teachingAssistant = req.body.teachingAssistant;
-		 let coordinator = req.body.coordinator;
-		 let zoomMaster = req.body.zoomMaster;
-		 let personalDevelopment = req.body.personalDevelopment;
+		 let role = req.body.role;
+		 let fullName = req.body.fullName;
+		 let email = req.body.email;
 	 	res.status(200).json({
 			status: "success",
-			leadTeacher:`${leadTeacher}`,
-			assistantLeadTeacher:`${assistantLeadTeacher}`,
-			teachingAssistant:`${teachingAssistant}`,
-			coordinator:`${coordinator}`,
-			zoomMaster:`${zoomMaster}`,
-			personalDevelopment:`${personalDevelopment}`
+			role:`${role}`,
+			fullName:`${fullName}`,
+			email:`${email}`
 		});
 		 {/*	const results = await pool.query(
 			"INSERT INTO cohort (name, start_date, end_date, school_id, created_by) VALUES ($1,'2021/10/01','2022/10/01',1,1)",[cohort]);
