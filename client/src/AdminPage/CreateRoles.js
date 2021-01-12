@@ -110,7 +110,7 @@ const CreateRoles = () =>{
 </div>
 </div>
 <div className="container col-5 mt-2 m-auto">
-  <button type="submit" value="Submit" class="btn btn-danger col-8 mt-2 ">Create Class</button>
+  <button type="submit" value="Submit" class="btn btn-danger col-8 mt-2 mb-5">Create Class</button>
   </div>
 </form>
 
