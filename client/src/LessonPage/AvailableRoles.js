@@ -8,30 +8,30 @@ const AvailableRoles = () =>{
 <div className="row">
       <div className="col mx-4">
                 <div class="form-check ">
-  <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="..."/>
+  <input class="form-check-input position-static" type="radio" name="leadTeacher" value="Lead Teacher"/>
    <label class="form-check-label" for="inlineRadio1">Lead Teacher</label>
 </div>
       <div class="form-check">
-  <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="..."/>
+  <input class="form-check-input position-static" type="radio" name="assistantLeadTeacher" value="Assistant Lead Teacher"/>
   <label class="form-check-label" for="inlineRadio1">Assistant Lead Teacher</label>
 </div>
       <div class="form-check">
-  <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="..."/>
+  <input class="form-check-input position-static" type="radio" name="teachingAssistant" value="Teaching Assistant"/>
   <label class="form-check-label" for="inlineRadio1">Teaching Assistant</label>
 </div>
      
 </div>
  <div className="col mx-4">
     <div class="form-check">
-  <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="..."/>
+  <input class="form-check-input position-static" type="radio" name="coordinator" value="Coordinator"/>
   <label class="form-check-label" for="inlineRadio1">Coordinator</label>
 </div>
    <div class="form-check ">
-  <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="..."/>
+  <input class="form-check-input position-static" type="radio" name="zoomMaster" value="Zoom Master (Host)"/>
    <label class="form-check-label" for="inlineRadio1">Zoom Master (Host)</label>
 </div>
       <div class="form-check">
-  <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="..."/>
+  <input class="form-check-input position-static" type="radio" name="personalDevelopment" value="Personal Development Rep"/>
   <label class="form-check-label" for="inlineRadio1">Personal Development Rep</label>
 </div>    
 </div>
