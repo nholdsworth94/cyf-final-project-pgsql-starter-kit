@@ -5,10 +5,25 @@ import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import Admin_Page from"../Images/Admin_Page.jpg";
 import { Link } from "react-router-dom";
-
- const lessons = fakeLessons.lessons;
+import { useEffect, useState } from "react";
+ //const lessons = fakeLessons.lessons;
 const AdminPage =({RolesButtonHandler})=>{
+  const [lessons, setLessons] = useState([]);
  
+	useEffect(() => {
+    fetchData();
+	}, []);
+
+	const fetchData = async () => {
+		try {
+			const response = await fetch('https://cyf-finalproject-class-planner.herokuapp.com/api/signed_volunteers');
+			const data = await response.json();
+			console.log(data.data);
+			setLessons(data.data);
+		} catch (error) {
+			console.log(error.message);
+		}
+  };
 
     return(
       <div>
@@ -30,10 +45,9 @@ const AdminPage =({RolesButtonHandler})=>{
     <thead>
     <tr>
       <th>No.</th>
-      <th>Module</th>
-      <th>Lesson</th>
-      <th>Date</th>
-      <th>Time</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Role</th>
       <th></th>
     </tr>
   </thead>
