@@ -82,7 +82,7 @@ router.get("/module", async (req, res) => {
 router.get("/lesson", async (req, res) => {
 	try {
 		const results = await pool.query(
-			'SELECT lesson.id ,name,week_number,date,starttime,endtime,lesson.syllabus_link FROM lesson INNER JOIN module ON module.id = module_id ORDER BY lesson.id'
+			'SELECT lesson.id ,name,week_number,date,starttime,endtime,lessonsyllabus_link FROM lesson INNER JOIN module ON module.id = module_id ORDER BY lesson.id'
 		);
 
 		res.status(200).json({
@@ -95,10 +95,28 @@ router.get("/lesson", async (req, res) => {
 	}
 });
 
+
+
 router.get("/lesson_role", async (req, res) => {
 	try {
 		const results = await pool.query(
 			'SELECT * FROM lesson_role'
+		);
+
+		res.status(200).json({
+			status: "success",
+			results: results.rows.length,
+			data: results.rows,
+		});
+	} catch (error) {
+		console.log(error.message);
+	}
+});
+
+router.get("/signed_volunteers", async (req, res) => {
+	try {
+		const results = await pool.query(
+			'SELECT * FROM signed_volunteers'
 		);
 
 		res.status(200).json({
@@ -261,6 +279,41 @@ router.post("/CreateClass", async (req, res) => {
 			results: results.rows.length,
 			data: results.rows,
 		});
+	} catch (error) {
+		console.log(error.message);
+	}
+});
+
+router.post("/CreateClass", async (req, res) => {
+	try { 
+		 let leadTeacher = req.body.leadTeacher;
+		 let assistantLeadTeacher = req.body.assistantLeadTeacher;
+		 let teachingAssistant = req.body.teachingAssistant;
+		 let coordinator = req.body.coordinator;
+		 let zoomMaster = req.body.zoomMaster;
+		 let personalDevelopment = req.body.personalDevelopment;
+	 	res.status(200).json({
+			status: "success",
+			leadTeacher:`${leadTeacher}`,
+			assistantLeadTeacher:`${assistantLeadTeacher}`,
+			teachingAssistant:`${teachingAssistant}`,
+			coordinator:`${coordinator}`,
+			zoomMaster:`${zoomMaster}`,
+			personalDevelopment:`${personalDevelopment}`
+		});
+		 {/*	const results = await pool.query(
+			"INSERT INTO cohort (name, start_date, end_date, school_id, created_by) VALUES ($1,'2021/10/01','2022/10/01',1,1)",[cohort]);
+			const result1 = await pool.query(
+			"INSERT INTO module (name, syllabus_link) VALUES ($1,'test')",[module]);
+			const result2 = await pool.query(
+			 "INSERT INTO lesson (week_number, content, syllabus_link , module_id, date,starttime,endtime,leadteacher,assistantleadteacher,teachingassistant,coordinator,zoommaster,personaldevelopment ) VALUES ($1,'test',$2,1, $3,$4,$5,$6,$7,$8,$9,$10,$11)",
+			 [lesson,material,date,startTime,endTime,leadTeacherQuantity,assistantLeadTeacherQuantity,teachingAssistantQuantity,coordinatorQuantity,zoomMasterQuantity,personalDevelopmentQuantity]);
+
+		res.status(200).json({
+			status: "success",
+			results: results.rows.length,
+			data: results.rows,
+		});*/}
 	} catch (error) {
 		console.log(error.message);
 	}
