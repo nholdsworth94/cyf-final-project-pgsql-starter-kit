@@ -8,6 +8,7 @@ import LogInPage from '../LogInPage/LogInPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
 import UpcomingLessons from '../UpcomingLessons/UpcomingLessons';
 import LessonPage from '../LessonPage/LessonPage';
+import AdminLessonPage from '../AdminPage/AdminLessonPage'
 
 const Main = () => {
   return (
@@ -20,6 +21,7 @@ const Main = () => {
       <Route exact path='/RegisterPage' component={RegisterPage}></Route>
       <Route exact path='/UpcomingLessons' component={UpcomingLessons}></Route>
       <Route exact path='/LessonPage' component={LessonPage}></Route>
+      <Route exact path='/AdminLessonPage' component={AdminLessonPage}></Route>
     </Switch>
   );
 }
