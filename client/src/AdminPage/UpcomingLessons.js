@@ -39,13 +39,13 @@ const UpcomingLessons =({RolesButtonHandler})=>{
     return(
       <div>
 <Header />
-      <div class="dropdown text-right my-1 mx-4">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <div className="dropdown text-right my-1 mx-4">
+  <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Choose Cohort
   </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+  <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
     {school.map(el =>
-    <a class="dropdown-item" href="#">{el.name}</a>
+    <a className="dropdown-item" href="#">{el.name}</a>
     )}
   </div>
 </div>
@@ -72,7 +72,7 @@ const UpcomingLessons =({RolesButtonHandler})=>{
   </tbody>
   </table>
 </div>  
- <div class="clear"></div>
+ <div className="clear"></div>
 <Footer />
       </div>
       

@@ -28,7 +28,7 @@ const LandingPage = () => {
  <div className="subTitleLP">Together, we can help disadvantaged adults find meaningful work.</div>
      
       </div>
-      <div class="clear"></div>
+      <div className="clear"></div>
       <Footer/>
       </div>
   )

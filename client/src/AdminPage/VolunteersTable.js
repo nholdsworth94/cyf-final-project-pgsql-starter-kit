@@ -47,7 +47,7 @@ const VolunteersTable = ({lessonId}) =>{
       <td>{el.full_name}</td>
       <td>{el.email}</td>
       <td>{el.role_id}</td>
-      <td><a target="_blank"  href={`mailto:${el.email}`}>    <i class="fa fa-envelope envelopeSize" > Send Email</i></a></td> 
+      <td><a target="_blank"  href={`mailto:${el.email}`}>    <i className="fa fa-envelope envelopeSize" > Send Email</i></a></td> 
     </tr>
   
   

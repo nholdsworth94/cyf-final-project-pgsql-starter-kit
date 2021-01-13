@@ -31,53 +31,8 @@ router.get("/users", async (req, res) => {
 	}
 });
 
-router.get("/school", async (req, res) => {
-	try {
-		const results = await pool.query(
-			'SELECT * FROM school'
-		);
 
-		res.status(200).json({
-			status: "success",
-			results: results.rows.length,
-			data: results.rows,
-		});
-	} catch (error) {
-		console.log(error.message);
-	}
-});
 
-router.get("/cohort", async (req, res) => {
-	try {
-		const results = await pool.query(
-			'SELECT * FROM cohort'
-		);
-
-		res.status(200).json({
-			status: "success",
-			results: results.rows.length,
-			data: results.rows,
-		});
-	} catch (error) {
-		console.log(error.message);
-	}
-});
-
-router.get("/module", async (req, res) => {
-	try {
-		const results = await pool.query(
-			'SELECT * FROM module'
-		);
-
-		res.status(200).json({
-			status: "success",
-			results: results.rows.length,
-			data: results.rows,
-		});
-	} catch (error) {
-		console.log(error.message);
-	}
-});
 
 router.get("/lesson", async (req, res) => {
 	try {
@@ -97,21 +52,6 @@ router.get("/lesson", async (req, res) => {
 
 
 
-router.get("/lesson_role", async (req, res) => {
-	try {
-		const results = await pool.query(
-			'SELECT * FROM lesson_role'
-		);
-
-		res.status(200).json({
-			status: "success",
-			results: results.rows.length,
-			data: results.rows,
-		});
-	} catch (error) {
-		console.log(error.message);
-	}
-});
 
 router.get("/signed_volunteers", async (req, res) => {
 	try {
@@ -120,62 +60,16 @@ router.get("/signed_volunteers", async (req, res) => {
 		);
 
 		res.status(200).json({
-			status: "success",
-			results: results.rows.length,
-			data: results.rows,
+			status: "success"
 		});
 	} catch (error) {
 		console.log(error.message);
 	}
 });
 
-router.get("/lesson_role_link", async (req, res) => {
-	try {
-		const results = await pool.query(
-			'SELECT * FROM lesson_role_link'
-		);
 
-		res.status(200).json({
-			status: "success",
-			results: results.rows.length,
-			data: results.rows,
-		});
-	} catch (error) {
-		console.log(error.message);
-	}
-});
 
-router.get("/cohort_lesson_link", async (req, res) => {
-	try {
-		const results = await pool.query(
-			'SELECT * FROM cohort_lesson_link'
-		);
 
-		res.status(200).json({
-			status: "success",
-			results: results.rows.length,
-			data: results.rows,
-		});
-	} catch (error) {
-		console.log(error.message);
-	}
-});
-
-router.get("/cohort_lesson_user_link", async (req, res) => {
-	try {
-		const results = await pool.query(
-			'SELECT * FROM cohort_lesson_user_link'
-		);
-
-		res.status(200).json({
-			status: "success",
-			results: results.rows.length,
-			data: results.rows,
-		});
-	} catch (error) {
-		console.log(error.message);
-	}
-});
 
 
 router.post("/login", async (req, res) => {
@@ -187,9 +81,7 @@ router.post("/login", async (req, res) => {
   console.log(`${password}`);
 		
 		res.status(200).json({
-			status: "success",
-			email: `${email}`,
-			password: `${password}`
+			status: "success"
 		});
 	} catch (error) {
 		console.log(error.message);
@@ -211,11 +103,7 @@ router.post("/register", async (req, res) => {
   console.log(`${password}`);
 		
 		res.status(200).json({
-			status: "success",
-			fname: `${fname}`,
-			lname: `${lname}`,
-			email: `${email}`,
-			password: `${password}`
+			status: "success"
 		});
 	} catch (error) {
 		console.log(error.message);
@@ -239,11 +127,10 @@ router.post("/CreateClass", async (req, res) => {
 		 let zoomMasterQuantity = req.body.zoomMasterQuantity;
 		 let personalDevelopmentQuantity = req.body.personalDevelopmentQuantity;
 	
-			await pool.query(
+		const results =	await pool.query(
 			 "INSERT INTO lesson (week_number, syllabus_link , date,starttime,endtime,leadteacher,assistantleadteacher,teachingassistant,coordinator,zoommaster,personaldevelopment,module,cohort ) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13)",
 			 [lesson,material,date,startTime,endTime,leadTeacherQuantity,assistantLeadTeacherQuantity,teachingAssistantQuantity,coordinatorQuantity,zoomMasterQuantity,personalDevelopmentQuantity,module,cohort]);
-			 res.status(200);
-			 pool.end();
+			 res.status(200).text("success");
 	} catch (error) {
 		console.log(error.message);
 	}
@@ -258,7 +145,9 @@ router.post("/signed_volunteers", async (req, res) => {
  
 			const results = await pool.query(
 			"INSERT INTO signed_volunteers (full_name, email, lesson_id, role_id) VALUES ($1,$2,$3,$4)",[fullName,email,lesson_id,role]);
-		res.status(200);
+		res.status(200).json({
+			status: "success"
+		});
 	} catch (error) {
 		console.log(error.message);
 	}
@@ -269,7 +158,9 @@ router.get("/signed_volunteers/:lessonId", async (req, res) => {
 
 			const results = await pool.query(
 			"SELECT * FROM signed_volunteers  where lesson_id=$1",[lesson_id]);
-		res.status(200);
+		res.status(200).json({
+			status: "success"
+		});
 	} catch (error) {
 		console.log(error.message);
 	}
@@ -281,8 +172,9 @@ router.get("/lesson/delete/:lessonId", async (req, res) => {
 	
 		const results = await pool.query(
 			"DELETE FROM lesson where id=$1",[lesson_id]);
-		res.status(200);
-	
+		res.status(200).json({
+			status: "success"
+		});
 	} catch (error) {
 		console.log(error.message);
 	}
