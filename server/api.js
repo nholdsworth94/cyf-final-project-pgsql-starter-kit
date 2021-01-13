@@ -108,8 +108,10 @@ router.post("/register", async (req, res) => {
 		
 		res.status(200).json({
 			status: "success",
-			results: results.rows.length,
-			data: results.rows,
+			first_name: `${fname}`,
+			last_name: `${lname}`,
+			email: `${email}`,
+			password: `${password}`,
 		});
 	} catch (error) {
 		console.log(error.message);
