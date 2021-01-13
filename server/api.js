@@ -1,5 +1,5 @@
 
-import { Router } from "express";
+import { query, Router } from "express";
 
 import { Connection } from "./db";
 
@@ -242,7 +242,8 @@ router.post("/CreateClass", async (req, res) => {
 			await pool.query(
 			 "INSERT INTO lesson (week_number, syllabus_link , date,starttime,endtime,leadteacher,assistantleadteacher,teachingassistant,coordinator,zoommaster,personaldevelopment,module,cohort ) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13)",
 			 [lesson,material,date,startTime,endTime,leadTeacherQuantity,assistantLeadTeacherQuantity,teachingAssistantQuantity,coordinatorQuantity,zoomMasterQuantity,personalDevelopmentQuantity,module,cohort]);
-	     	res.status(200);
+			 res.status(200);
+			 pool.end();
 	} catch (error) {
 		console.log(error.message);
 	}
@@ -258,7 +259,6 @@ router.post("/signed_volunteers", async (req, res) => {
 			const results = await pool.query(
 			"INSERT INTO signed_volunteers (full_name, email, lesson_id, role_id) VALUES ($1,$2,$3,$4)",[fullName,email,lesson_id,role]);
 		res.status(200);
-		console.log("volunteer sign up successfully")
 	} catch (error) {
 		console.log(error.message);
 	}
@@ -270,7 +270,6 @@ router.get("/signed_volunteers/:lessonId", async (req, res) => {
 			const results = await pool.query(
 			"SELECT * FROM signed_volunteers  where lesson_id=$1",[lesson_id]);
 		res.status(200);
-		console.log("volunteer is successfully get by id");
 	} catch (error) {
 		console.log(error.message);
 	}
@@ -283,7 +282,7 @@ router.get("/lesson/delete/:lessonId", async (req, res) => {
 		const results = await pool.query(
 			"DELETE FROM lesson where id=$1",[lesson_id]);
 		res.status(200);
-		console.log("class is deleted successfully");
+	
 	} catch (error) {
 		console.log(error.message);
 	}
