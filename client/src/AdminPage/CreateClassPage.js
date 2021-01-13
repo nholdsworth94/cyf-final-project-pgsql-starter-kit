@@ -16,6 +16,7 @@ const CreateClassPage =({RolesButtonHandler})=>{
     <Header />
     <img className="imgAdmin d-inline" src={Admin_Page}></img>
     <CreateRoles/>
+     <div class="clear"></div>
     <Footer />
       </div>
       
