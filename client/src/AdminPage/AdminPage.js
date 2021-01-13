@@ -1,6 +1,8 @@
 import React from "react";
 import fakeLessons from "../fakeLessons.json"
 import VolunteersTable from "./VolunteersTable"
+import UpcomingLessons from "./UpcomingLessons"
+import LessonsTable from "./LessonsTable"
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import Admin_Page from"../Images/Admin_Page.jpg";
@@ -16,7 +18,7 @@ const AdminPage =({RolesButtonHandler})=>{
 
 	const fetchData = async () => {
 		try {
-			const response = await fetch('https://cyf-finalproject-class-planner.herokuapp.com/api/signed_volunteers');
+			const response = await fetch('https://cyf-finalproject-class-planner.herokuapp.com/api/lesson');
 			const data = await response.json();
 			console.log(data.data);
 			setLessons(data.data);
@@ -40,20 +42,22 @@ const AdminPage =({RolesButtonHandler})=>{
   </div>
 
       <div className="ULPage">
-        <h3 className="text-left mt-0"><strong>Signed Volunteers</strong></h3>
+        <h3 className="text-left mt-0"><strong>All Classes</strong></h3>
   <table>
     <thead>
     <tr>
-      <th>Name</th>
-      <th>Email</th>
-      <th>Role</th>
+      <th>Date</th>
+      <th>Module</th>
+      <th>Lesson</th>
+      <th>Time</th>
+      <th></th>
       <th></th>
     </tr>
   </thead>
   <tbody>
     {lessons.map(el =>
   
-<VolunteersTable el={el} RolesButtonHandler={RolesButtonHandler}/>
+<LessonsTable el={el} RolesButtonHandler={RolesButtonHandler}/>
   
   
      
