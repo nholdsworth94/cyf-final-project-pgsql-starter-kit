@@ -5,7 +5,6 @@ const LessonPage_Info = ({lessonId,lesson,module,time,date,link}) => {
 
   return (
     <div className="">
-      <h1>lesson id: {lessonId}</h1>
       <h3 className="text-center"><strong>Westmidlands Class 1 </strong></h3>
       <ul className="list-unstyled bg-light row my-2 mx-3">
         <div className="col mx-2 my-2">
