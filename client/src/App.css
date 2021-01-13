@@ -213,18 +213,23 @@ thead tr {
     border-radius: 0px;
 }
 
-thead :nth-child(3){
-    padding-left: 48px;
+thead :nth-child(2){
     text-align: left;
+    position: relative;
+    left: -10px;
+}
+
+thead :nth-child(3){
+    text-align: left;
+    position: relative;
+    left: -15px;
 }
 thead :nth-child(4){
-    padding-left: 45px;
     text-align: left;
+    position: relative;
+    left: -15px;
 }
-thead :nth-child(5){
-    padding-left: 40px;
-    text-align: left;
-}
+
 
 th{
     padding: 10px;
@@ -246,13 +251,21 @@ tbody{
   position: absolute;
   font-weight: 500;
   height: 50vh;
+  text-align: left;
 }
 tbody tr :first-child {
-   text-align: center;
+   text-align: left;
+   padding-left: 30px;
 }
 thead tr :first-child {
-   text-align: center;
+   text-align: left;
+   padding-left: 40px;
 }
+ tbody tr :nth-child(5) {
+   position: relative;
+   left: -30px;
+}
+
 .firstRow tr:first-child  {
     background-color: rgb(226, 250, 202);
 }
@@ -271,6 +284,7 @@ tbody tr:hover{
 
 .rolesBTN{
     margin:3px;
+    padding-right: 20px;
 }
 
 .createClass{
@@ -287,4 +301,4 @@ tbody tr:hover{
     margin-bottom: 0;
     padding-bottom: 0;
 }
-
+.clear { clear: both; height: 60px; }
