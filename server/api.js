@@ -60,7 +60,9 @@ router.get("/signed_volunteers", async (req, res) => {
 		);
 
 		res.status(200).json({
-			status: "success"
+			status: "success",
+			results: results.rows.length,
+			data: results.rows,
 		});
 	} catch (error) {
 		console.log(error.message);
@@ -81,7 +83,9 @@ router.post("/login", async (req, res) => {
   console.log(`${password}`);
 		
 		res.status(200).json({
-			status: "success"
+			status: "success",
+			results: results.rows.length,
+			data: results.rows,
 		});
 	} catch (error) {
 		console.log(error.message);
@@ -103,7 +107,9 @@ router.post("/register", async (req, res) => {
   console.log(`${password}`);
 		
 		res.status(200).json({
-			status: "success"
+			status: "success",
+			results: results.rows.length,
+			data: results.rows,
 		});
 	} catch (error) {
 		console.log(error.message);
@@ -143,7 +149,9 @@ router.get("/signed_volunteers/:lessonId", async (req, res) => {
 			const results = await pool.query(
 			"SELECT * FROM signed_volunteers  where lesson_id=$1",[lesson_id]);
 		res.status(200).json({
-			status: "success"
+			status: "success",
+			results: results.rows.length,
+			data: results.rows,
 		});
 	} catch (error) {
 		console.log(error.message);
@@ -161,7 +169,9 @@ router.post("/signed_volunteers", async (req, res) => {
 			const results = await pool.query(
 			"INSERT INTO signed_volunteers (full_name, email, lesson_id, role_id) VALUES ($1,$2,$3,$4)",[fullName,email,lesson_id,role]);
 		res.status(200).json({
-			status: "success"
+			status: "success",
+			results: results.rows.length,
+			data: results.rows,
 		});
 	} catch (error) {
 		console.log(error.message);
@@ -175,7 +185,9 @@ router.get("/lesson/delete/:lessonId", async (req, res) => {
 		const results = await pool.query(
 			"DELETE FROM lesson where id=$1",[lesson_id]);
 		res.status(200).json({
-			status: "success"
+			status: "success",
+			results: results.rows.length,
+			data: results.rows,
 		});
 	} catch (error) {
 		console.log(error.message);
