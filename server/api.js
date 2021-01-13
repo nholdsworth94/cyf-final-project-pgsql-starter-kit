@@ -136,6 +136,21 @@ router.post("/CreateClass", async (req, res) => {
 	}
 });
 
+router.get("/signed_volunteers/:lessonId", async (req, res) => {
+	try {
+		 let lesson_id = req.params.lessonId;
+
+			const results = await pool.query(
+			"SELECT * FROM signed_volunteers  where lesson_id=$1",[lesson_id]);
+		res.status(200).json({
+			status: "success"
+		});
+	} catch (error) {
+		console.log(error.message);
+	}
+});
+
+
 router.post("/signed_volunteers", async (req, res) => {
 	try { 
 		 let role = req.body.role;
@@ -145,19 +160,6 @@ router.post("/signed_volunteers", async (req, res) => {
  
 			const results = await pool.query(
 			"INSERT INTO signed_volunteers (full_name, email, lesson_id, role_id) VALUES ($1,$2,$3,$4)",[fullName,email,lesson_id,role]);
-		res.status(200).json({
-			status: "success"
-		});
-	} catch (error) {
-		console.log(error.message);
-	}
-});
-router.get("/signed_volunteers/:lessonId", async (req, res) => {
-	try {
-		 let lesson_id = req.params.lessonId;
-
-			const results = await pool.query(
-			"SELECT * FROM signed_volunteers  where lesson_id=$1",[lesson_id]);
 		res.status(200).json({
 			status: "success"
 		});
