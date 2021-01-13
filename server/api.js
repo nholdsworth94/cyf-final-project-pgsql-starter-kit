@@ -335,7 +335,7 @@ router.delete("/lesson/:lessonId", async (req, res) => {
 			email:`${email}`
 		});*/}
 		const results = await pool.query(
-			"DELETE FROM lesson where lesson_id=$1",[lesson_id]);
+			"DELETE FROM lesson where id=$1",[lesson_id]);
 		res.status(200).json({
 			status: "success",
 			results: results.rows.length,
