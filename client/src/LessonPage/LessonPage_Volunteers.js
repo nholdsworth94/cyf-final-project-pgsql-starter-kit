@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 
 const LessonPage_Volunteers = ({lessonId}) => {
-
+ console.log(lessonId+"  landed on lesson page volunteer component")
 const [lessons, setLessons] = useState([]);
 
 	useEffect(() => {
