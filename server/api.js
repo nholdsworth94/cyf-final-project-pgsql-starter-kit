@@ -266,13 +266,9 @@ router.post("/CreateClass", async (req, res) => {
 			personalDevelopment:`${personalDevelopment}`,
 			personalDevelopmentQuantity:`${personalDevelopmentQuantity}`
 		});*/}
-		 	const results = await pool.query(
-			"INSERT INTO cohort (name, start_date, end_date, school_id, created_by) VALUES ($1,'2021/10/01','2022/10/01',1,1)",[cohort]);
-			const result1 = await pool.query(
-			"INSERT INTO module (name, syllabus_link) VALUES ($1,'test')",[module]);
 			const result2 = await pool.query(
-			 "INSERT INTO lesson (week_number, content, syllabus_link , module_id, date,starttime,endtime,leadteacher,assistantleadteacher,teachingassistant,coordinator,zoommaster,personaldevelopment ) VALUES ($1,'test',$2,1, $3,$4,$5,$6,$7,$8,$9,$10,$11)",
-			 [lesson,material,date,startTime,endTime,leadTeacherQuantity,assistantLeadTeacherQuantity,teachingAssistantQuantity,coordinatorQuantity,zoomMasterQuantity,personalDevelopmentQuantity]);
+			 "INSERT INTO lesson (cohort,week_number, syllabus_link , module, date,starttime,endtime,leadteacher,assistantleadteacher,teachingassistant,coordinator,zoommaster,personaldevelopment ) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13)",
+			 [cohort,lesson,material,module,date,startTime,endTime,leadTeacherQuantity,assistantLeadTeacherQuantity,teachingAssistantQuantity,coordinatorQuantity,zoomMasterQuantity,personalDevelopmentQuantity]);
 
 		res.status(200).json({
 			status: "success",
@@ -328,22 +324,23 @@ router.get("/signed_volunteers/:lessonId", async (req, res) => {
 	}
 });
 
-router.delete("/signed_volunteers/:lessonId", async (req, res) => {
+router.delete("/lesson/:lessonId", async (req, res) => {
 	try {
-		 let lesson_id = req.params.lessonId;
+		let lesson_id = req.params.lessonId;
+		{/*	 let lesson_id = req.params.lessonId;
  	 	res.status(200).json({
 			status: "success",
 			role:`${role}`,
 			fullName:`${fullName}`,
 			email:`${email}`
-		});
-		{/*	const results = await pool.query(
-			"SELECT * FROM signed_volunteers  where lesson_id=$1",[lesson_id]);
+		});*/}
+		const results = await pool.query(
+			"DELETE FROM lesson where lesson_id=$1",[lesson_id]);
 		res.status(200).json({
 			status: "success",
 			results: results.rows.length,
 			data: results.rows,
-		});*/}
+		});
 	} catch (error) {
 		console.log(error.message);
 	}
