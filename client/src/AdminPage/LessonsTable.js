@@ -25,7 +25,7 @@ date:currentDate,
 time:`${el.starttime}-${el.endtime}`,
 module:el.name,
 link:el.syllabus_link }  }}><button type="button" class="nav_Home rolesBTN"  >View Details</button></Link></td>
-<td>{deleteId=el.id}<form method="DELETE" action={`https://cyf-finalproject-class-planner.herokuapp.com/api/lesson/${deleteId}`}>
+<td>{deleteId=el.id}<form method="GET" action={`https://cyf-finalproject-class-planner.herokuapp.com/api/lesson/delete/${deleteId}`}>
   
   <button type="submit" value="submit" class="nav_Home rolesBTN"  >Delete Class</button></form></td> 
     </tr>
