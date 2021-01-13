@@ -239,12 +239,10 @@ router.post("/CreateClass", async (req, res) => {
 		 let zoomMasterQuantity = req.body.zoomMasterQuantity;
 		 let personalDevelopmentQuantity = req.body.personalDevelopmentQuantity;
 	
-			const result2 = await pool.query(
+			await pool.query(
 			 "INSERT INTO lesson (week_number, syllabus_link , date,starttime,endtime,leadteacher,assistantleadteacher,teachingassistant,coordinator,zoommaster,personaldevelopment,module,cohort ) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13)",
 			 [lesson,material,date,startTime,endTime,leadTeacherQuantity,assistantLeadTeacherQuantity,teachingAssistantQuantity,coordinatorQuantity,zoomMasterQuantity,personalDevelopmentQuantity,module,cohort]);
-
-		res.status(200);
-		console.log("class created successfully");
+	     	res.status(200);
 	} catch (error) {
 		console.log(error.message);
 	}
