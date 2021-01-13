@@ -82,7 +82,7 @@ router.get("/module", async (req, res) => {
 router.get("/lesson", async (req, res) => {
 	try {
 		const results = await pool.query(
-			'SELECT lesson.id ,name,week_number,date,starttime,endtime,lesson.syllabus_link FROM lesson INNER JOIN module ON module.id = module_id ORDER BY date'
+			'SELECT id,cohort,module,week_number,syllabus_link,date,starttime,endtime FROM lesson ORDER BY date'
 		);
 
 		res.status(200).json({
