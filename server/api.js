@@ -324,7 +324,7 @@ router.get("/signed_volunteers/:lessonId", async (req, res) => {
 	}
 });
 
-router.delete("/lesson/:lessonId", async (req, res) => {
+router.get("/lesson/delete/:lessonId", async (req, res) => {
 	try {
 		let lesson_id = req.params.lessonId;
 		{/*	 let lesson_id = req.params.lessonId;
