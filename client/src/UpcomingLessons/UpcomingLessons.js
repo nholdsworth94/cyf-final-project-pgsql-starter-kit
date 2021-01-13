@@ -54,10 +54,9 @@ const UpcomingLessons =({RolesButtonHandler})=>{
   <table>
     <thead>
     <tr>
-      <th>No.</th>
+      <th>Date</th>
       <th>Module</th>
       <th>Lesson</th>
-      <th>Date</th>
       <th>Time</th>
       <th></th>
     </tr>
@@ -73,6 +72,7 @@ const UpcomingLessons =({RolesButtonHandler})=>{
   </tbody>
   </table>
 </div>  
+ <div class="clear"></div>
 <Footer />
       </div>
       
