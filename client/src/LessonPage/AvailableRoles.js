@@ -1,6 +1,8 @@
 import React from "react";
 
 const AvailableRoles = ({lessonId}) =>{
+
+   console.log(lessonId+" landed on available roles component")
     return (
     <div className="row-10">
         <h4 className="container col-8 my-2"><strong>Available Roles:</strong></h4>

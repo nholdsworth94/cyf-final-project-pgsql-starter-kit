@@ -232,49 +232,19 @@ router.post("/CreateClass", async (req, res) => {
 		 let material = req.body.material;
 		 let startTime = req.body.startTime;
 		 let endTime = req.body.endTime;
-		 let leadTeacher = req.body.leadTeacher;
 		 let leadTeacherQuantity = req.body.leadTeacherQuantity;
-		 let assistantLeadTeacher = req.body.assistantLeadTeacher;
 		 let assistantLeadTeacherQuantity = req.body.assistantLeadTeacherQuantity;
-		 let teachingAssistant = req.body.teachingAssistant;
 		 let teachingAssistantQuantity = req.body.teachingAssistantQuantity;
-		 let coordinator = req.body.coordinator;
 		 let coordinatorQuantity = req.body.coordinatorQuantity;
-		 let zoomMaster = req.body.zoomMaster;
 		 let zoomMasterQuantity = req.body.zoomMasterQuantity;
-		 let personalDevelopment = req.body.personalDevelopment;
 		 let personalDevelopmentQuantity = req.body.personalDevelopmentQuantity;
-	 {/*	res.status(200).json({
-			status: "success",
-			cohort: `${cohort}`,
-			lesson: `${lesson}`,
-			date: `${date}`,
-			module: `${module}`,
-			material: `${material}`,
-			startTime: `${startTime}`,
-			endTime: `${endTime}`,
-			leadTeacher:`${leadTeacher}`,
-			leadTeacherQuantity:`${leadTeacherQuantity}`,
-			assistantLeadTeacher:`${assistantLeadTeacher}`,
-			assistantLeadTeacherQuantity:`${assistantLeadTeacherQuantity}`,
-			teachingAssistant:`${teachingAssistant}`,
-			teachingAssistantQuantity:`${teachingAssistantQuantity}`,
-			coordinator:`${coordinator}`,
-			coordinatorQuantity:`${coordinatorQuantity}`,
-			zoomMaster:`${zoomMaster}`,
-			zoomMasterQuantity:`${zoomMasterQuantity}`,
-			personalDevelopment:`${personalDevelopment}`,
-			personalDevelopmentQuantity:`${personalDevelopmentQuantity}`
-		});*/}
+	
 			const result2 = await pool.query(
-			 "INSERT INTO lesson (cohort,week_number, syllabus_link , module, date,starttime,endtime,leadteacher,assistantleadteacher,teachingassistant,coordinator,zoommaster,personaldevelopment ) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13)",
-			 [cohort,lesson,material,module,date,startTime,endTime,leadTeacherQuantity,assistantLeadTeacherQuantity,teachingAssistantQuantity,coordinatorQuantity,zoomMasterQuantity,personalDevelopmentQuantity]);
+			 "INSERT INTO lesson (week_number, syllabus_link , date,starttime,endtime,leadteacher,assistantleadteacher,teachingassistant,coordinator,zoommaster,personaldevelopment,module,cohort ) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13)",
+			 [lesson,material,date,startTime,endTime,leadTeacherQuantity,assistantLeadTeacherQuantity,teachingAssistantQuantity,coordinatorQuantity,zoomMasterQuantity,personalDevelopmentQuantity,module,cohort]);
 
-		res.status(200).json({
-			status: "success",
-			results: results.rows.length,
-			data: results.rows,
-		});
+		res.status(200);
+		console.log("class created successfully");
 	} catch (error) {
 		console.log(error.message);
 	}
@@ -286,19 +256,11 @@ router.post("/signed_volunteers", async (req, res) => {
 		 let fullName = req.body.fullName;
 		 let email = req.body.email;
 		 let lesson_id = req.body.lesson_id;
- {/*	 	res.status(200).json({
-			status: "success",
-			role:`${role}`,
-			fullName:`${fullName}`,
-			email:`${email}`
-		});});*/}
+ 
 			const results = await pool.query(
-			"INSERT INTO signed_volunteers (full_name, email, role_id, lesson_id) VALUES ($1,$2,$3,$4)",[fullName,email,role,lesson_id]);
-		res.status(200).json({
-			status: "success",
-			results: results.rows.length,
-			data: results.rows,
-		});
+			"INSERT INTO signed_volunteers (full_name, email, lesson_id, role_id) VALUES ($1,$2,$3,$4)",[fullName,email,lesson_id,role]);
+		res.status(200);
+		console.log("volunteer sign up successfully")
 	} catch (error) {
 		console.log(error.message);
 	}
@@ -306,19 +268,11 @@ router.post("/signed_volunteers", async (req, res) => {
 router.get("/signed_volunteers/:lessonId", async (req, res) => {
 	try {
 		 let lesson_id = req.params.lessonId;
- {/*	 	res.status(200).json({
-			status: "success",
-			role:`${role}`,
-			fullName:`${fullName}`,
-			email:`${email}`
-		});});*/}
+
 			const results = await pool.query(
 			"SELECT * FROM signed_volunteers  where lesson_id=$1",[lesson_id]);
-		res.status(200).json({
-			status: "success",
-			results: results.rows.length,
-			data: results.rows,
-		});
+		res.status(200);
+		console.log("volunteer is successfully get by id");
 	} catch (error) {
 		console.log(error.message);
 	}
@@ -327,20 +281,11 @@ router.get("/signed_volunteers/:lessonId", async (req, res) => {
 router.get("/lesson/delete/:lessonId", async (req, res) => {
 	try {
 		let lesson_id = req.params.lessonId;
-		{/*	 let lesson_id = req.params.lessonId;
- 	 	res.status(200).json({
-			status: "success",
-			role:`${role}`,
-			fullName:`${fullName}`,
-			email:`${email}`
-		});*/}
+	
 		const results = await pool.query(
 			"DELETE FROM lesson where id=$1",[lesson_id]);
-		res.status(200).json({
-			status: "success",
-			results: results.rows.length,
-			data: results.rows,
-		});
+		res.status(200);
+		console.log("class is deleted successfully");
 	} catch (error) {
 		console.log(error.message);
 	}
