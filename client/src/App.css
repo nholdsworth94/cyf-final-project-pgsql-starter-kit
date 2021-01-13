@@ -261,10 +261,7 @@ thead tr :first-child {
    text-align: left;
    padding-left: 40px;
 }
- tbody tr :nth-child(5) {
-   position: relative;
-   left: -30px;
-}
+ 
 
 .firstRow tr:first-child  {
     background-color: rgb(226, 250, 202);
@@ -283,7 +280,10 @@ tbody tr:hover{
 }
 
 .rolesBTN{
-    margin:3px;
+    margin-top:1px;
+    margin-bottom:1px;
+    position: relative;
+    left: -50px;
     padding-right: 20px;
 }
 
