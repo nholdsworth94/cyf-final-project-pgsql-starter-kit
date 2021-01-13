@@ -5,7 +5,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Header from "../Header/Header";
 import LessonPage_Info from "./LessonPage_Info";
-import LessonPage_Volunteers from "./LessonPage_Volunteers";
 import Footer from "../Footer/Footer";
 import {  useLocation } from "react-router-dom";
 import VolunteersTable from "./VolunteersTable";
