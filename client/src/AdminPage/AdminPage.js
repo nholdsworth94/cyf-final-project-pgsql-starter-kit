@@ -44,7 +44,6 @@ const AdminPage =({RolesButtonHandler})=>{
   <table>
     <thead>
     <tr>
-      <th>No.</th>
       <th>Name</th>
       <th>Email</th>
       <th>Role</th>
@@ -61,7 +60,8 @@ const AdminPage =({RolesButtonHandler})=>{
   )}
   </tbody>
   </table>
-</div>  
+</div> 
+ <div class="clear"></div> 
 <Footer />
       </div>
       
