@@ -30,16 +30,7 @@ const UpcomingLessons =({RolesButtonHandler})=>{
     return(
       <div>
 <Header />
-      <div className="dropdown text-right my-1 mx-4">
-  <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Choose Cohort
-  </button>
-  <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    {school.map(el =>
-    <a className="dropdown-item" href="#">{el.name}</a>
-    )}
-  </div>
-</div>
+      
       <div className="ULPage">
         <h3 className="mt-0"><strong>Upcoming Classes</strong></h3>
   <table>

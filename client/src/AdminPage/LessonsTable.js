@@ -21,6 +21,7 @@ const LessonsTable = ({el}) =>{
    return(
    
 <tr>
+  <iframe name="hiddenFrame" className="hide"></iframe>
       <td>{currentDate}</td>
       <td>{el.module}</td>
       <td>{el.week_number}</td>
@@ -31,8 +32,8 @@ date:currentDate,
 time:`${el.starttime}-${el.endtime}`,
 module:el.module,
 link:el.syllabus_link }  }}><button type="button" className="nav_Home rolesBTN "  >View Details</button></Link></td>
-<td><div className="d-none ">{deleteId=el.id}</div><iframe name="hiddenFrame" className="hide"></iframe><form method="GET" target="hiddenFrame" action={`https://cyf-finalproject-class-planner.herokuapp.com/api/lesson/delete/${deleteId}`}>
- <button type="submit" value="submit" data-toggle="modal" data-target="#signUpModal" className="nav_Home AdminRolesBTN mx-1"  >Delete Class</button>
+<td><div className="d-none ">{deleteId=el.id}</div><form method="GET" target="hiddenFrame" action={`https://cyf-finalproject-class-planner.herokuapp.com/api/lesson/delete/${deleteId}`}>
+ <button type="submit" value="submit" data-toggle="modal" data-target="#signUpModal" className="nav_Home AdminRolesBTN mx-1" >Delete Class</button>
   </form></td> 
 
 
