@@ -32,7 +32,7 @@ const CreateRoles = () =>{
     return (
     <div className="row-10 ">
         <h5 className="container col-10 text-left"><strong>Create a new class</strong></h5>
-        <iframe name="hiddenFrame" class="hide"></iframe>
+        <iframe name="hiddenFrame" className="hide"></iframe>
             <form className=" container col-10 mt-1" target="hiddenFrame" method="POST" action="https://cyf-finalproject-class-planner.herokuapp.com/api/CreateClass">
               <div className="form-inline ">
                 <div className="form-group mx-1 mb-1">
