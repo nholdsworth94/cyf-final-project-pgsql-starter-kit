@@ -23,7 +23,7 @@ const LessonsTable = ({el}) =>{
 lesson:el.week_number,
 date:currentDate,
 time:`${el.starttime}-${el.endtime}`,
-module:el.name,
+module:el.module,
 link:el.syllabus_link }  }}><button type="button" className="nav_Home rolesBTN "  >View Details</button></Link></td>
 <td><div className="d-none ">{deleteId=el.id}</div><form method="GET" action={`https://cyf-finalproject-class-planner.herokuapp.com/api/lesson/delete/${deleteId}`}>
   
