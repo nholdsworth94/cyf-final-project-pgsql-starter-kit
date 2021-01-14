@@ -174,8 +174,8 @@ router.post("/signed_volunteers", async (req, res) => {
  
 			const results = await pool.query(
 			"INSERT INTO signed_volunteers (full_name, email, lesson_id, role_id) VALUES ($1,$2,$3,$4)",[fullName,email,lesson_id,role]);
-		res.send(200);
 		
+
 	} catch (error) {
 		console.log(error.message);
 	}
