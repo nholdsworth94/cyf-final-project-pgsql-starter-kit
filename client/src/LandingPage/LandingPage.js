@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 const LandingPage = () => {
   return (
-      <div>
+      <div className="backgroundImage">
       <Header/>
       <Link to="/RegisterPage">
       <RegisterButton/>
@@ -20,16 +20,20 @@ const LandingPage = () => {
           <div className="titleLP">
             
             <div className="mainTitleLP">
+
+              
            
     <strong >Volunteer with CodeYourFuture</strong>
 </div>
-    <img className="imageLP" src={Home_Page}></img>
+   {/** <img className="imageLP" src={Home_Page}></img> */}
 </div>
  <div className="subTitleLP">Together, we can help disadvantaged adults find meaningful work.</div>
      
       </div>
       <div className="clear"></div>
+     <div className="clear"></div>
       <Footer/>
+
       </div>
   )
 };
