@@ -1,7 +1,7 @@
 import React from "react";
 
 const LessonPage_Info = ({lessonId,lesson,module,time,date,link}) => {
-  console.log(lessonId+"  landed on lesson page info")
+
 
   return (
     <div className="">

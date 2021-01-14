@@ -9,32 +9,23 @@ import { useEffect, useState } from "react";
  //const lessons = fakeLessons.lessons;
 const UpcomingLessons =({RolesButtonHandler})=>{
  const [lessons, setLessons] = useState([]);
- const [school, setSchool] = useState([]);
+
 	useEffect(() => {
     fetchData();
-    fetchSchool();
+  
 	}, []);
 
 	const fetchData = async () => {
 		try {
 			const response = await fetch('https://cyf-finalproject-class-planner.herokuapp.com/api/lesson');
 			const data = await response.json();
-			console.log(data.data);
+		//	console.log(data.data);
 			setLessons(data.data);
 		} catch (error) {
 			console.log(error.message);
 		}
   };
-  const fetchSchool = async () => {
-		try {
-			const response = await fetch('https://cyf-finalproject-class-planner.herokuapp.com/api/school');
-			const data = await response.json();
-			console.log(data.data);
-			setSchool(data.data);
-		} catch (error) {
-			console.log(error.message);
-		}
-	};
+ 
 
     return(
       <div>

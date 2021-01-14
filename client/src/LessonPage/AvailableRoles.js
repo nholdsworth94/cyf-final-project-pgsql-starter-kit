@@ -3,19 +3,26 @@ import { useState } from 'react';
 
 const AvailableRoles = ({lessonId}) =>{
 
+  function validateEmail(email) 
+    {
+        var re = /\S+@\S+\.\S+/;
+        return re.test(email);
+    }
+    
+
   const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
   const [role, setRole] = useState('');
 
   function SubmitButton(){
-    if (fullName && email && role ){
-      return <button type="submit" data-toggle="modal" data-target="#signUpModal"  value="submit" className="btn btn-danger mx-2 mb-2">Class Sign Up</button>
+    if (fullName && validateEmail(email) && role ){
+      return <button type="submit" data-toggle="modal" data-target="#signUpModal"   value="submit" className="btn btn-danger mx-2 mb-2">Class Sign Up</button>
     } else {
       return <button type="submit" data-toggle="modal" data-target="#signUpModal"  value="submit" className="btn btn-danger mx-2 mb-2" disabled>Class Sign Up</button>
     };
   };
 
-   console.log(lessonId+" landed on available roles component")
+ 
     return (
     <div className="row-10">
         <h4 className="container col-8 my-2"><strong>Available Roles:</strong></h4>
@@ -59,7 +66,7 @@ const AvailableRoles = ({lessonId}) =>{
   </div>
   <div className="form-group mx-2 mb-2">
     <label for="staticEmail2" className="sr-only">Email</label>
-    <input type="email" className="form-control" placeholder="Email" name="email" value={email} onChange={ e => setEmail(e.target.value)} required/>
+    <input type="email" className="form-control" placeholder="Email" name="email"  value={email} onChange={ e => setEmail(e.target.value)} required/>
     <input type="hidden" name="lesson_id" value={lessonId}/>
   </div>
   <SubmitButton/>

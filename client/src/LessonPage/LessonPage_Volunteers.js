@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 
 const LessonPage_Volunteers = ({lessonId}) => {
- console.log(lessonId+"  landed on lesson page volunteer component")
+ 
 const [lessons, setLessons] = useState([]);
 
 	useEffect(() => {
@@ -15,7 +15,7 @@ const [lessons, setLessons] = useState([]);
 		try {
 			const response = await fetch(`https://cyf-finalproject-class-planner.herokuapp.com/api/signed_volunteers/${lessonId}`);
 			const data = await response.json();
-			console.log(data.data);
+		//	console.log(data.data);
 			setLessons(data.data);
 		} catch (error) {
 			console.log(error.message);

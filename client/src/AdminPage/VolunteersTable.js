@@ -17,7 +17,7 @@ const VolunteersTable = ({lessonId}) =>{
 		try {
 			const response = await fetch(`https://cyf-finalproject-class-planner.herokuapp.com/api/signed_volunteers/${lessonId}`);
 			const data = await response.json();
-			console.log(data.data);
+			//console.log(data.data);
 			setLessons(data.data);
 		} catch (error) {
 			console.log(error.message);
