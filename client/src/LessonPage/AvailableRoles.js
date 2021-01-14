@@ -87,6 +87,13 @@ const AvailableRoles = ({lessonId}) =>{
               You have successfully signed up for class. Thanks
             </div>
             <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-dismiss="modal"
+              >
+                OK
+              </button>
              
             </div>
           </div>
