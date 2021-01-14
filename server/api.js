@@ -109,7 +109,7 @@ router.post("/register", async (req, res) => {
 	
 		 res.status(200);
 
-		setTimeout(res.redirect("https://cyf-finalproject-class-planner.herokuapp.com/LogInPage"),2000);
+		setTimeout(res.redirect("https://cyf-finalproject-class-planner.herokuapp.com/LogInPage"),10000);
 
 		} catch (error) {
 		console.log(error.message);
