@@ -37,7 +37,7 @@ router.get("/users", async (req, res) => {
 router.get("/lesson", async (req, res) => {
 	try {
 		const results = await pool.query(
-			'SELECT id,cohort,module,week_number,syllabus_link,date,starttime,endtime FROM lesson ORDER BY date'
+			'SELECT id,cohort,module,week_number,syllabus_link,date,starttime,endtime,leadteacher,assistantleadteacher,teachingassistant,coordinator,zoommaster,personaldevelopment FROM lesson ORDER BY date'
 		);
 
 		res.status(200).json({
