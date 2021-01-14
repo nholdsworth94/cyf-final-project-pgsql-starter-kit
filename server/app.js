@@ -16,7 +16,7 @@ app.use(express.json());
 app.use(helmet());
 app.use(logErrors());
 app.use(morgan("dev"));
-app.set('view engine', 'html');
+app.set('view engine', 'ejs');
 
 if (app.get("env") === "production") {
 	app.enable("trust proxy");
