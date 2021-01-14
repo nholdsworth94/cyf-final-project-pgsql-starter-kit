@@ -62,7 +62,7 @@ const RegisterPage = () => {
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title">Delete Class</h5>
+              <h5 class="modal-title">Register</h5>
               <button
                 type="button"
                 class="close"
@@ -76,14 +76,6 @@ const RegisterPage = () => {
               You have successfully registered. Thanks
             </div>
             <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-success"
-                data-dismiss="modal"
-                onClick={()=>window.location.reload()}
-              >
-                OK
-              </button>
              
             </div>
           </div>

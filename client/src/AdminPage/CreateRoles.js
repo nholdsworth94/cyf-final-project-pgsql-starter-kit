@@ -19,14 +19,18 @@ const CreateRoles = () =>{
 
 
   function SubmitButton(){
-    if (cohort && module && lesson && date && material  && (leadTeacherQuantity >=0  && leadTeacherQuantity<=10)
-      && (assistantLeadTeacherQuantity >=0 && assistantLeadTeacherQuantity<=10) && 
-      (teachingAssistantQuantity >=0 && teachingAssistantQuantity<=10) &&
-       (coordinatorQuantity>=0 && coordinatorQuantity<=10)
-        && (zoomMasterQuantity>=0 && zoomMasterQuantity<=10)
-      && (personalDevelopmentQuantity>=0 && personalDevelopmentQuantity<=10) ){
-      return <button type="submit"  data-toggle="modal" data-target="#signUpModal" value="Submit" className="btn btn-danger col-8 mt-2 mb-5">Create Class</button>
-    } else {
+     
+    if( !(leadTeacherQuantity <-1)  && !(leadTeacherQuantity >10)
+      && !(assistantLeadTeacherQuantity <-1) && !(assistantLeadTeacherQuantity>10) && 
+      !(teachingAssistantQuantity <-1) && !( teachingAssistantQuantity>10) &&
+       !(coordinatorQuantity<-1 ) && !(coordinatorQuantity>10)
+        && !(zoomMasterQuantity<-1 ) &&  !(zoomMasterQuantity>10)
+      && !(personalDevelopmentQuantity<-1)  && !(personalDevelopmentQuantity>10) && cohort && module && lesson && date && material   && leadTeacherQuantity  && assistantLeadTeacherQuantity && teachingAssistantQuantity && coordinatorQuantity  && zoomMasterQuantity  && personalDevelopmentQuantity )
+         { 
+           return <button type="submit"  data-toggle="modal" data-target="#signUpModal" value="Submit" className="btn btn-danger col-8 mt-2 mb-5" >Create Class</button>
+      }      
+      
+    else {
       return  <button type="submit"  data-toggle="modal" data-target="#signUpModal" value="Submit" className="btn btn-danger col-8 mt-2 mb-5" disabled>Create Class</button>
     };
   };
@@ -109,15 +113,15 @@ const CreateRoles = () =>{
                 <div className="form-check ">
    <label className="form-check-label col-7" for="inlineRadio1">Lead Teacher</label>
     
-  <input className=" col-4" type="number"  name="leadTeacherQuantity" value={leadTeacherQuantity} onChange={ e => setLeadTeacherQuantity(e.target.value)} min="0" max="10" placeholder="quantity" required></input>
+  <input className=" col-4" type="number"  name="leadTeacherQuantity" value={leadTeacherQuantity} onChange={ e => setLeadTeacherQuantity(e.target.value)} min="0" max="10" placeholder="" required></input>
 </div>
       <div className="form-check">
   <label className="form-check-label col-7" for="inlineRadio1">Assistant Lead Teacher</label>
-  <input className=" col-4" type="number"  name="assistantLeadTeacherQuantity" value={assistantLeadTeacherQuantity} onChange={ e => setAssistantLeadTeacherQuantity(e.target.value)} min="0" max="10" placeholder="quantity" required></input>
+  <input className=" col-4" type="number"  name="assistantLeadTeacherQuantity" value={assistantLeadTeacherQuantity} onChange={ e => setAssistantLeadTeacherQuantity(e.target.value)} min="0" max="10" placeholder="" required></input>
 </div>
       <div className="form-check">
   <label className="form-check-label col-7" for="inlineRadio1">Teaching Assistant</label>
-  <input className=" col-4" type="number"  name="teachingAssistantQuantity" value={teachingAssistantQuantity} onChange={ e => setTeachingAssistantQuantity(e.target.value)} min="0" max="10" placeholder="quantity" required></input>
+  <input className=" col-4" type="number"  name="teachingAssistantQuantity" value={teachingAssistantQuantity} onChange={ e => setTeachingAssistantQuantity(e.target.value)} min="0" max="10" placeholder="" required></input>
 </div>
      
 </div>
@@ -125,15 +129,15 @@ const CreateRoles = () =>{
  <div className="col-5">
    <div className="form-check">
   <label className="form-check-label col-8" for="inlineRadio1">Coordinator</label>
-  <input className=" col-4" type="number"  name="coordinatorQuantity" value={coordinatorQuantity} onChange={ e => setCoordinatorQuantity(e.target.value)} min="0" max="10" placeholder="quantity" required></input>
+  <input className=" col-4" type="number"  name="coordinatorQuantity" value={coordinatorQuantity} onChange={ e => setCoordinatorQuantity(e.target.value)} min="0" max="10" placeholder="" required></input>
 </div>
  <div className="form-check">
   <label className="form-check-label col-8" for="inlineRadio1">Zoom Master (Host)</label>
-  <input className=" col-4" type="number"  name="zoomMasterQuantity" value={zoomMasterQuantity} onChange={ e => setZoomMasterQuantity(e.target.value)} min="0" max="10" placeholder="quantity" required></input>
+  <input className=" col-4" type="number"  name="zoomMasterQuantity" value={zoomMasterQuantity} onChange={ e => setZoomMasterQuantity(e.target.value)} min="0" max="10" placeholder="" required></input>
 </div>
       <div className="form-check ">
   <label className="form-check-label col-8" for="inlineRadio1">Personal Development Rep</label>
-  <input className=" col-4" type="number"  name="personalDevelopmentQuantity" value={personalDevelopmentQuantity} onChange={ e => setPersonalDevelopmentQuantity(e.target.value)} min="0" max="10" placeholder="quantity" required></input>
+  <input className=" col-4" type="number"  name="personalDevelopmentQuantity" value={personalDevelopmentQuantity} onChange={ e => setPersonalDevelopmentQuantity(e.target.value)} min="0" max="10" placeholder="" required></input>
 </div>
       
       
