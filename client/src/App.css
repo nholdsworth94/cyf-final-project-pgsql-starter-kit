@@ -311,3 +311,5 @@ tbody tr:hover{
     bottom:8px;
     padding-right: 30px;
 }
+
+.hide { position:absolute; top:-1px; left:-1px; width:1px; height:1px; }
