@@ -3,8 +3,32 @@ import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 import RegisterButton from "../RegisterButton/RegisterButton";
 import { Link } from "react-router-dom";
+import { useState } from 'react';
 
 const LogInPage = () => {
+
+ function validateEmail(email) 
+    {
+        var re = /\S+@\S+\.\S+/;
+        return re.test(email);
+    }
+    
+
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  function SubmitButton(){
+    if ( validateEmail(email) && password ){
+      return <button className="btn btn-danger" type="submit" value="submit">login</button>
+    } else {
+      return <button className="btn btn-danger" type="submit" value="submit" disabled>login</button>
+    };
+  };
+
+
+
+
+
   return (
       <div>
       <Header/> 
@@ -16,11 +40,11 @@ const LogInPage = () => {
 
 <div className="form">
   
-  <form className="login-form" method="POST" action="https://cyf-finalproject-class-planner.herokuapp.com/api/login">
-    <input type="email" placeholder="email" name="email" required/>
-    <input type="password" placeholder="password" name="password" required/>
-    <Link to="/UpcomingLessons">
-    <button type="submit" value="submit">login</button>
+  <form className="login-form" method="POST" action="https://cyf-finalproject-class-planner.herokuapp.com/UpcomingLessons">
+    <input type="email" placeholder="email" value={email} onChange={ e => setEmail(e.target.value)}  name="email" required/>
+    <input type="password" placeholder="password" value={password} onChange={ e => setPassword(e.target.value)} name="password" required/>
+<Link to="/UpcomingLessons">
+      <SubmitButton/>
    </Link>
      <p className="messageForgot"> <a href="#">Forgot password?</a></p>
     <p className="message">Don't have an account? <a href="#">Create an account</a></p>
