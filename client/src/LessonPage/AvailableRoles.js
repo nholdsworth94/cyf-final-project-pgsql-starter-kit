@@ -19,7 +19,7 @@ const AvailableRoles = ({lessonId}) =>{
     return (
     <div className="row-10">
         <h4 className="container col-8 my-2"><strong>Available Roles:</strong></h4>
-            <form class=" container col-8" target="_self" method="POST" action="https://cyf-finalproject-class-planner.herokuapp.com/api/signed_volunteers">
+            <form class=" container col-8" target="_parent" method="POST" action="https://cyf-finalproject-class-planner.herokuapp.com/api/signed_volunteers">
 <div className="row">
       <div className="col mx-4">
                 <div class="form-check ">
