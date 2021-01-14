@@ -105,7 +105,7 @@ router.post("/register", async (req, res) => {
   let password = req.body.password;
   console.log(`\npassword: ${typeof password}`);
   console.log(`${password}`);
-		res.send(Buffer.from('<p>some html</p>'))
+		res.render('index');
 		{/*res.status(200).json({
 			status: "success",
 			first_name: `${fname}`,
