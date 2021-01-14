@@ -42,7 +42,7 @@ const UpcomingLessons =({RolesButtonHandler})=>{
     </tr>
   </thead>
   <tbody className="firstRow">
-    {lessons.map(el,index =>
+    {lessons.map(el =>
   
 <LessonsTable el={el} />
   
