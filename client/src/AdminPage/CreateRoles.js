@@ -19,9 +19,12 @@ const CreateRoles = () =>{
 
 
   function SubmitButton(){
-    if (cohort && module && lesson && date && material  && leadTeacherQuantity
-      && assistantLeadTeacherQuantity && teachingAssistantQuantity && coordinatorQuantity && zoomMasterQuantity
-      && personalDevelopmentQuantity ){
+    if (cohort && module && lesson && date && material  && (leadTeacherQuantity >=0  && leadTeacherQuantity<=10)
+      && (assistantLeadTeacherQuantity >=0 && assistantLeadTeacherQuantity<=10) && 
+      (teachingAssistantQuantity >=0 && teachingAssistantQuantity<=10) &&
+       (coordinatorQuantity>=0 && coordinatorQuantity<=10)
+        && (zoomMasterQuantity>=0 && zoomMasterQuantity<=10)
+      && (personalDevelopmentQuantity>=0 && personalDevelopmentQuantity<=10) ){
       return <button type="submit"  data-toggle="modal" data-target="#signUpModal" value="Submit" className="btn btn-danger col-8 mt-2 mb-5">Create Class</button>
     } else {
       return  <button type="submit"  data-toggle="modal" data-target="#signUpModal" value="Submit" className="btn btn-danger col-8 mt-2 mb-5" disabled>Create Class</button>
