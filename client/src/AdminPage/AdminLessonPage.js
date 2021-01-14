@@ -28,6 +28,7 @@ const AdminLessonPage = () => {
             <LessonPage_Info lessonId={lessonId} lesson={lesson} module={module} time={time} date={date} link={link}/>
             <VolunteersTable lessonId={lessonId} />
             <div className="clear"></div>
+            <div className="clear"></div>
             <Footer />
         </div>
     );

@@ -267,14 +267,14 @@ thead tr :first-child {
     background-color: rgb(226, 250, 202);
 }
 .firstRow tr:first-of-type:hover {
-    background-color: skyblue;
+    background-color: rgb(255, 232, 232);
     border-radius: 30px;
     cursor: pointer;
 }
 
  
 tbody tr:hover{
-    background-color: skyblue;
+    background-color:rgb(255, 232, 232);
     border-radius: 30px;
     cursor: pointer;
 }
@@ -303,8 +303,22 @@ tbody tr:hover{
 .clear { clear: both; height: 60px; }
 
 .envelopeSize{
-    font-size: 24px;
+    font-size: 20px;
+   
 }
+.envelopeSize:hover{
+    color: blue;
+}
+
+.envelopeSizeAlone{
+    font-size: 20px;
+    color:white;
+   
+}
+.envelopeSizeAlone:hover{
+    color: royalblue;
+}
+
 .AdminRolesBTN{
     position: relative;
     right:20px;

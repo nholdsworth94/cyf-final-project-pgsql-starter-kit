@@ -23,14 +23,20 @@ const VolunteersTable = ({lessonId}) =>{
 			console.log(error.message);
 		}
   };
-
+   let allMail = lessons.map(x=>x.email);
+   let i="";  
+   for(let a=0;a<allMail.length;a++){
+       i +=allMail[a]+",";
+     }
+   console.log(i);
    
-
+ 
    return(
    
-
-
+      
      <div className="ULPage">
+         
+
         <h3 className="mt-0"><strong>Signed Volunteers</strong></h3>
   <table>
     <thead>
@@ -38,7 +44,7 @@ const VolunteersTable = ({lessonId}) =>{
       <th>Name</th>
       <th>Email</th>
       <th>Role</th>
-      <th></th>
+      <th ><a target="_blank"  href={`mailto:${i}`}>    <i className="fa fa-envelope envelopeSizeAlone" > Send Email All</i></a></th>
     </tr>
   </thead>
   <tbody >
