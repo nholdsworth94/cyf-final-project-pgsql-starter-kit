@@ -96,7 +96,7 @@ const AvailableRoles = ({lessonId}) =>{
             <div class="modal-footer">
               <button
                 type="button"
-                class="btn btn-secondary"
+                class="btn btn-success"
                 data-dismiss="modal"
                 onClick={()=>window.location.reload()}
               >
