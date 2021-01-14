@@ -174,9 +174,7 @@ router.post("/signed_volunteers", async (req, res) => {
  
 			const results = await pool.query(
 			"INSERT INTO signed_volunteers (full_name, email, lesson_id, role_id) VALUES ($1,$2,$3,$4)",[fullName,email,lesson_id,role]);
-			res.redirect('https://cyf-finalproject-class-planner.herokuapp.com/');
-			req.timeout(3000);
-			res.end();
+			res.redirect(`https://cyf-finalproject-class-planner.herokuapp.com/LessonPage/${lesson_id}`);
 
 	} catch (error) {
 		console.log(error.message);
