@@ -34,11 +34,12 @@ const RegisterPage = () => {
       <div className="container">
   <div className="info">
     <h4>Create a new account</h4>
+    <iframe name="hiddenFrame" className="hide"></iframe>
   </div>
 </div>
 <div className="form">
   
-  <form className="login-form" method="POST" target="_self" action="https://cyf-finalproject-class-planner.herokuapp.com/api/register">
+  <form className="login-form" method="POST" target="hiddenFrame" action="https://cyf-finalproject-class-planner.herokuapp.com/api/register">
    <input type="text" placeholder="first name" name="fname" value={firstName} onChange={ e => setFirstName(e.target.value)} required/>
     <input type="text" placeholder="last name" name="lname" value={lastName} onChange={ e => setLastName(e.target.value)} required/>
     <input type="email" placeholder="email" name="email"  value={email} onChange={ e => setEmail(e.target.value)} required/>
@@ -76,6 +77,14 @@ const RegisterPage = () => {
               You have successfully registered. Thanks
             </div>
             <div class="modal-footer">
+                <button
+                type="button"
+                class="btn btn-success"
+                data-dismiss="modal"
+                onClick={()=>window.location.reload()}
+              >
+                OK
+              </button>
              
             </div>
           </div>
