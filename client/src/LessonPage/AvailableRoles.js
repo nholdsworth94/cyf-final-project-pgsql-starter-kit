@@ -91,7 +91,7 @@ const AvailableRoles = ({lessonId}) =>{
                 type="button"
                 class="btn btn-secondary"
                 data-dismiss="modal"
-                onClick={(e)=>{e.window.location.reload()}}
+                onClick={()=>window.location.reload()}
               >
                 OK
               </button>
