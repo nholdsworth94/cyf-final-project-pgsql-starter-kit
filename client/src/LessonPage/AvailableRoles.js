@@ -87,13 +87,6 @@ const AvailableRoles = ({lessonId}) =>{
             </div>
             <div class="modal-footer">
              
-              <button
-                type="button"
-                class="btn btn-secondary"
-                data-dismiss="modal"
-              >
-                OK
-              </button>
             </div>
           </div>
         </div>
