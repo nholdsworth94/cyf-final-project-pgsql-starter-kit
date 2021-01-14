@@ -106,10 +106,10 @@ router.post("/register", async (req, res) => {
   console.log(`\npassword: ${typeof password}`);
   console.log(`${password}`);
 		
-	
+	    setTimeout(console.log("test timeout"),5000);
 		 res.status(200);
-
-		setTimeout(res.redirect("https://cyf-finalproject-class-planner.herokuapp.com/LogInPage"),10000);
+		
+		res.redirect("https://cyf-finalproject-class-planner.herokuapp.com/LogInPage");
 
 		} catch (error) {
 		console.log(error.message);
