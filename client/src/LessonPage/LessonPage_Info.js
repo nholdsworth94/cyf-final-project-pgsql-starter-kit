@@ -1,11 +1,11 @@
 import React from "react";
 
-const LessonPage_Info = ({lessonId,lesson,module,time,date,link}) => {
+const LessonPage_Info = ({lessonId,lesson,module,time,date,link,cohort}) => {
 
 
   return (
     <div className="">
-      <h3 className="text-center"><strong>Westmidlands Class 1 </strong></h3>
+      <h3 className="text-center"><strong>{cohort} </strong></h3>
       <ul className="list-unstyled bg-light row my-2 mx-3">
         <div className="col mx-2 my-2">
         <li><strong>Module: </strong><span>{module}</span></li>

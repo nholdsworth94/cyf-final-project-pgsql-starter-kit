@@ -2,6 +2,7 @@ import React from "react";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 import { useState } from 'react';
+import { Link } from "react-router-dom";
 
 
 const RegisterPage = () => {
@@ -45,10 +46,11 @@ const RegisterPage = () => {
 
    
  <SubmitButton/>
- <Link to="/LogInPage">
+ 
+  </form>
+  <Link to="/LogInPage">
     <p className="message">Already on CodeYourFuture? <a href="#">Log In</a></p>
     </Link>
-  </form>
 
 
 

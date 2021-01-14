@@ -20,10 +20,11 @@ const LessonPage = () => {
     let time= useLocation().state.time;
     let date = useLocation().state.date;
     let link=useLocation().state.link;
+    let cohort=useLocation().state.cohort;
     return (
         <div className="App">
             <Header />
-            <LessonPage_Info lessonId={lessonId} lesson={lesson} module={module} time={time} date={date} link={link}/>
+            <LessonPage_Info lessonId={lessonId} lesson={lesson} module={module} time={time} date={date} link={link} cohort={cohort}/>
             <AvailableRoles lessonId={lessonId}/>
             <LessonPage_Volunteers lessonId={lessonId} />
             <div className="clear"></div>

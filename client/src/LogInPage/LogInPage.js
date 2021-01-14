@@ -47,10 +47,12 @@ const LogInPage = () => {
       <SubmitButton/>
    </Link>
      <p className="messageForgot"> <a href="#">Forgot password?</a></p>
-     <Link to="/RegisterPage">
+    
+  </form>
+
+   <Link to="/RegisterPage">
     <p className="message">Don't have an account? <a href="#">Create an account</a></p>
     </Link>
-  </form>
 </div>
       <Footer/>
       </div>

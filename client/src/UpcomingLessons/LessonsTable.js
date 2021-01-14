@@ -20,7 +20,8 @@ lesson:el.week_number,
 date:currentDate,
 time:`${el.starttime}-${el.endtime}`,
 module:el.module,
-link:el.syllabus_link }  }}><button type="button" className="nav_Home rolesBTN"  >View Vacancies</button></Link></td> 
+link:el.syllabus_link,
+cohort: el.cohort }  }}><button type="button" className="nav_Home rolesBTN"  >View Vacancies</button></Link></td> 
     </tr>
         
 
