@@ -43,6 +43,7 @@ const AdminPage =({RolesButtonHandler})=>{
 
       <div className="ULPage">
         <h3 className="text-left mt-0"><strong>All Classes</strong></h3>
+        <iframe name="hiddenFrame" className="hide"></iframe>
   <table>
     <thead>
     <tr>
@@ -57,7 +58,7 @@ const AdminPage =({RolesButtonHandler})=>{
   <tbody>
     {lessons.map(el =>
   
-<LessonsTable el={el} RolesButtonHandler={RolesButtonHandler}/>
+<LessonsTable el={el} />
   
   
      

@@ -16,7 +16,7 @@ const RegisterPage = () => {
   <form className="login-form" method="POST" action="https://cyf-finalproject-class-planner.herokuapp.com/api/register">
    <input type="text" placeholder="first name" name="fname" required/>
     <input type="text" placeholder="last name" name="lname" required/>
-    <input type="text" placeholder="email" name="email" required/>
+    <input type="email" placeholder="email" name="email" required/>
     <input type="password" placeholder="password" name="password" required/>
 
     <button type="submit" value="submit">Register</button>

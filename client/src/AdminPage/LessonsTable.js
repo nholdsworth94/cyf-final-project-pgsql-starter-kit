@@ -21,7 +21,7 @@ const LessonsTable = ({el}) =>{
    return(
    
 <tr>
-  <iframe name="hiddenFrame" className="hide"></iframe>
+  
       <td>{currentDate}</td>
       <td>{el.module}</td>
       <td>{el.week_number}</td>
