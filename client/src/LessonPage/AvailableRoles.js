@@ -59,7 +59,7 @@ const AvailableRoles = ({lessonId}) =>{
   </div>
   <div className="form-group mx-2 mb-2">
     <label for="staticEmail2" className="sr-only">Email</label>
-    <input type="text" className="form-control" placeholder="Email" name="email" value={email} onChange={ e => setEmail(e.target.value)} required/>
+    <input type="email" className="form-control" placeholder="Email" name="email" value={email} onChange={ e => setEmail(e.target.value)} required/>
     <input type="hidden" name="lesson_id" value={lessonId}/>
   </div>
   <SubmitButton/>
