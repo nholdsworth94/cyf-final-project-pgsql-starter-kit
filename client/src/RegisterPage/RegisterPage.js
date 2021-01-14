@@ -45,7 +45,9 @@ const RegisterPage = () => {
 
    
  <SubmitButton/>
+ <Link to="/LogInPage">
     <p className="message">Already on CodeYourFuture? <a href="#">Log In</a></p>
+    </Link>
   </form>
 
 
