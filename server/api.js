@@ -113,6 +113,8 @@ router.post("/register", async (req, res) => {
 			email: `${email}`,
 			password: `${password}`,
 		});
+
+		res.redirect("https://cyf-finalproject-class-planner.herokuapp.com/LogInPage");
 		} catch (error) {
 		console.log(error.message);
 	}

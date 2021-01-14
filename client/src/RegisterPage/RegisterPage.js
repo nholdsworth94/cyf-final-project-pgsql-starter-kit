@@ -36,8 +36,8 @@ const RegisterPage = () => {
   </div>
 </div>
 <div className="form">
-  <iframe name="hiddenFrame" className="hide"></iframe>
-  <form className="login-form" method="POST" target="hiddenFrame" action="https://cyf-finalproject-class-planner.herokuapp.com/api/register">
+  
+  <form className="login-form" method="POST" target="_self" action="https://cyf-finalproject-class-planner.herokuapp.com/api/register">
    <input type="text" placeholder="first name" name="fname" value={firstName} onChange={ e => setFirstName(e.target.value)} required/>
     <input type="text" placeholder="last name" name="lname" value={lastName} onChange={ e => setLastName(e.target.value)} required/>
     <input type="email" placeholder="email" name="email"  value={email} onChange={ e => setEmail(e.target.value)} required/>
