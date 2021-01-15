@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from 'react';
 
-const AvailableRoles = ({lessonId}) =>{
+const AvailableRoles = ({lessonId,leadTeacher,assistantLeadTeacher,teachingAssistant,coordinator,zoomMaster,personalDevelopment}) =>{
 
   function validateEmail(email) 
     {
@@ -32,30 +32,30 @@ const AvailableRoles = ({lessonId}) =>{
       <div className="col mx-4">
                 <div class="form-check ">
   <input className="form-check-input position-static" type="radio" name="role" value={role} onChange={ e => setRole("Lead Teacher")} required/>
-   <label className="form-check-label" for="inlineRadio1">Lead Teacher</label>
+   <label className="form-check-label" for="inlineRadio1">Lead Teacher    {leadTeacher}</label>
 </div>
       <div className="form-check">
   <input className="form-check-input position-static" type="radio" name="role" value={role} onChange={ e => setRole("Assistant Lead Teacher")} required/>
-  <label className="form-check-label" for="inlineRadio1">Assistant Lead Teacher</label>
+  <label className="form-check-label" for="inlineRadio1">Assistant Lead Teacher {assistantLeadTeacher}</label>
 </div>
       <div className="form-check">
   <input className="form-check-input position-static" type="radio" name="role" value={role} onChange={ e => setRole("Teaching Assistant")} required/>
-  <label className="form-check-label" for="inlineRadio1">Teaching Assistant</label>
+  <label className="form-check-label" for="inlineRadio1">Teaching Assistant   {teachingAssistant}</label>
 </div>
      
 </div>
  <div className="col mx-4">
     <div className="form-check">
   <input className="form-check-input position-static" type="radio" name="role" value={role} onChange={ e => setRole("Coordinator")}   required/>
-  <label className="form-check-label" for="inlineRadio1">Coordinator</label>
+  <label className="form-check-label" for="inlineRadio1">Coordinator  {coordinator}</label>
 </div>
    <div className="form-check ">
   <input className="form-check-input position-static" type="radio" name="role"  value={role} onChange={ e => setRole("Zoom Master (Host)")} required/>
-   <label className="form-check-label" for="inlineRadio1">Zoom Master (Host)</label>
+   <label className="form-check-label" for="inlineRadio1">Zoom Master (Host)  {zoomMaster}</label>
 </div>
       <div className="form-check">
   <input className="form-check-input position-static" type="radio" name="role" value={role} onChange={ e => setRole("Personal Development Rep")} required/>
-  <label className="form-check-label" for="inlineRadio1">Personal Development Rep</label>
+  <label className="form-check-label" for="inlineRadio1">Personal Development Rep   {personalDevelopment}</label>
 </div>    
 </div>
 </div>

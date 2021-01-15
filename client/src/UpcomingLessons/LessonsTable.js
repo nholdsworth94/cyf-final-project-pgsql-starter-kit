@@ -21,7 +21,13 @@ date:currentDate,
 time:`${el.starttime}-${el.endtime}`,
 module:el.module,
 link:el.syllabus_link,
-cohort: el.cohort }  }}><button type="button" className="nav_Home rolesBTN"  >View Vacancies</button></Link></td> 
+cohort: el.cohort,
+leadTeacher:el.leadteacher,
+assistantTeacher:el.assistantteacher,
+teachingAssistant:el.teachingassistant,
+coordinator:el.coordinator,
+zoomMaster:el.zoommaster,
+personalDevelopment:el.personaldevelopment }  }}><button type="button" className="nav_Home rolesBTN"  >View Vacancies</button></Link></td> 
     </tr>
         
 
