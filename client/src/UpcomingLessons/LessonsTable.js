@@ -10,7 +10,7 @@ const LessonsTable = ({el}) =>{
 
    return(
    
-<tr>
+<tr key={el.id}>
       <td>{currentDate}</td>
       <td>{el.module}</td>
       <td>{el.week_number}</td>
@@ -23,7 +23,7 @@ module:el.module,
 link:el.syllabus_link,
 cohort: el.cohort,
 leadTeacher:el.leadteacher,
-assistantTeacher:el.assistantteacher,
+assistantLeadTeacher:el.assistantleadteacher,
 teachingAssistant:el.teachingassistant,
 coordinator:el.coordinator,
 zoomMaster:el.zoommaster,
