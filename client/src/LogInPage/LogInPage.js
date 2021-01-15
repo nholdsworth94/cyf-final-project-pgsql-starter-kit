@@ -43,16 +43,16 @@ const LogInPage = () => {
   <form className="login-form" method="GET" action="https://cyf-finalproject-class-planner.herokuapp.com/UpcomingLessons">
     <input type="email" placeholder="email" value={email} onChange={ e => setEmail(e.target.value)}  name="email" required/>
     <input type="password" placeholder="password" value={password} onChange={ e => setPassword(e.target.value)} name="password" required/>
-    
+   
       <SubmitButton/>
 
      <p className="messageForgot"> <a href="#">Forgot password?</a></p>
     
   </form>
 
-   <Link to="/RegisterPage">
-    <p className="message">Don't have an account? <a href="#">Create an account</a></p>
-    </Link>
+  
+    <p className="message">Don't have an account? <span>  <Link to="/RegisterPage">Create an account </Link></span></p>
+   
 </div>
       <Footer/>
       </div>
