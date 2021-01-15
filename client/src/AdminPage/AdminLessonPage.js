@@ -10,6 +10,7 @@ import { useLocation } from "react-router-dom";
 import VolunteersTable from "./VolunteersTable";
 
 const AdminLessonPage = () => {
+  //created to access the state variables  from lessons table
   let lessonId = useLocation().state.id;
   let lesson = useLocation().state.lesson;
   let module = useLocation().state.module;

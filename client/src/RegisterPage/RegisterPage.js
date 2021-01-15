@@ -5,16 +5,18 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const RegisterPage = () => {
+
+  //email validation function
   function validateEmail(email) {
     var re = /\S+@\S+\.\S+/;
     return re.test(email);
   }
-
+//state variables are created
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
+//submit button logic and validation implemented
   function SubmitButton() {
     if (firstName && lastName && validateEmail(email) && password) {
       return (

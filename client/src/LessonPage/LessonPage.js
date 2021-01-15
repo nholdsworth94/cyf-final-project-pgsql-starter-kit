@@ -11,6 +11,7 @@ import AvailableRoles from "./AvailableRoles";
 import { useLocation } from "react-router-dom";
 
 const LessonPage = () => {
+  // state variables  created to get the values from lessons table
   let lessonId = useLocation().state.id;
   let lesson = useLocation().state.lesson;
   let module = useLocation().state.module;

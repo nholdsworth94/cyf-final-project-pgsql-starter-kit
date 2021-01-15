@@ -1,19 +1,18 @@
 import React from "react";
-import fakeLessons from "../fakeLessons.json";
 import LessonsTable from "./LessonsTable";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
-import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
-//const lessons = fakeLessons.lessons;
+
 const UpcomingLessons = ({ RolesButtonHandler }) => {
+  //state variables created
   const [lessons, setLessons] = useState([]);
 
   useEffect(() => {
     fetchData();
   }, []);
-
+//fetching the api
   const fetchData = async () => {
     try {
       const response = await fetch(

@@ -1,10 +1,9 @@
 import React from "react";
 import moment from "moment";
 import { Link } from "react-router-dom";
-import { useLocation } from "react-router-dom";
-import { useState } from "react";
 
 const LessonsTable = ({ el }) => {
+  //date formatting
   const currentDate = moment(el.date).format("DD-MM-YY");
   var deleteId;
 

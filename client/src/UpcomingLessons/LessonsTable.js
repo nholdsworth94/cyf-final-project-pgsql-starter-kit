@@ -3,6 +3,7 @@ import moment from "moment";
 import { Link } from "react-router-dom";
 
 const LessonsTable = ({ el }) => {
+  //date formatting
   const currentDate = moment(el.date).format("DD-MM-YY");
 
   return (

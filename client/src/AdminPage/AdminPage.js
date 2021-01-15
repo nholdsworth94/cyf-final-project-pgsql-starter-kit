@@ -1,28 +1,25 @@
 import React from "react";
-import fakeLessons from "../fakeLessons.json";
-import VolunteersTable from "./VolunteersTable";
-import UpcomingLessons from "./UpcomingLessons";
 import LessonsTable from "./LessonsTable";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import Admin_Page from "../Images/Admin_Page.jpg";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-//const lessons = fakeLessons.lessons;
+
 const AdminPage = ({ RolesButtonHandler }) => {
+  //created state variables
   const [lessons, setLessons] = useState([]);
 
   useEffect(() => {
     fetchData();
   }, []);
-
+  //fetching the api
   const fetchData = async () => {
     try {
       const response = await fetch(
         "https://cyf-finalproject-class-planner.herokuapp.com/api/lesson"
       );
       const data = await response.json();
-      //	console.log(data.data);
       setLessons(data.data);
     } catch (error) {
       console.log(error.message);

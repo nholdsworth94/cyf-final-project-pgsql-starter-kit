@@ -1,4 +1,3 @@
-import { faUniversalAccess } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 import { useState, useEffect } from "react";
 
@@ -11,12 +10,13 @@ const AvailableRoles = ({
   zoomMaster,
   personalDevelopment,
 }) => {
+  //state variables created
   const [lessons, setLessons] = useState([]);
 
   useEffect(() => {
     fetchData();
   }, []);
-
+ //fetching the api
   const fetchData = async () => {
     try {
       const response = await fetch(
@@ -29,12 +29,13 @@ const AvailableRoles = ({
       console.log(error.message);
     }
   };
+
+  //logic to hide the roles if all the vacancies are filled.
   let b = [];
   let a = lessons.map((el) => {
-    //   console.log(el.role_id);
     b.push(el.role_id);
   });
-  //console.log(b);
+ 
   let n;
   let o;
   let p;
@@ -49,33 +50,27 @@ const AvailableRoles = ({
   let perLength = [];
   for (let i = 0; i < b.length; i++) {
     let s1 = b[i].toString();
-    //  console.log(  s1);
     let s2 = "Lead Teacher";
     let s3 = "Assistant Lead Teacher";
     let s4 = "Teaching Assistant";
     let s5 = "Coordinator";
     let s6 = "Zoom Master (Host)";
     let s7 = "Personal Development Rep";
-    // console.log( s7);
     n = s1.trim().localeCompare(s2.trim());
     o = s1.trim().localeCompare(s3.trim());
     p = s1.trim().localeCompare(s4.trim());
     q = s1.trim().localeCompare(s5.trim());
     r = s1.trim().localeCompare(s6.trim());
     s = s1.trim().localeCompare(s7.trim());
-    //   console.log(s);
     if (n === 0) {
       leadLength.push(n);
     }
-
     if (o === 0) {
       assistLeadLength.push(o);
     }
-
     if (p === 0) {
       teachLength.push(p);
     }
-
     if (q === 0) {
       coLength.push(q);
     }
@@ -86,17 +81,16 @@ const AvailableRoles = ({
       perLength.push(s);
     }
   }
-  // console.log(perLength.length);
-
+ //email validation function 
   function validateEmail(email) {
     var re = /\S+@\S+\.\S+/;
     return re.test(email);
   }
-
+   //state variables created
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [role, setRole] = useState("");
-
+  //submit button validation and logic
   function SubmitButton() {
     if (fullName && validateEmail(email) && role) {
       return (

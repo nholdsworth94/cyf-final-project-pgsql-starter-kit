@@ -6,6 +6,7 @@ const router = new Router();
 
 const pool = Connection;
 
+//main api route
 router.get("/", async (req, res) => {
   try {
     res.json("Welcome to Class Planner API");
@@ -13,7 +14,7 @@ router.get("/", async (req, res) => {
     console.log(error.message);
   }
 });
-
+//route to get the users
 router.get("/users", async (req, res) => {
   try {
     const results = await pool.query("SELECT * FROM users");
@@ -27,7 +28,7 @@ router.get("/users", async (req, res) => {
     console.log(error.message);
   }
 });
-
+//route to get the lessons
 router.get("/lesson", async (req, res) => {
   try {
     const results = await pool.query(
@@ -43,7 +44,7 @@ router.get("/lesson", async (req, res) => {
     console.log(error.message);
   }
 });
-
+//route to get the signed volunteers
 router.get("/signed_volunteers", async (req, res) => {
   try {
     const results = await pool.query("SELECT * FROM signed_volunteers");
@@ -57,7 +58,7 @@ router.get("/signed_volunteers", async (req, res) => {
     console.log(error.message);
   }
 });
-
+//route for login
 router.post("/login", async (req, res) => {
   try {
     let email = req.body.email;
@@ -76,7 +77,7 @@ router.post("/login", async (req, res) => {
     console.log(error.message);
   }
 });
-
+//route for register
 router.post("/register", async (req, res) => {
   try {
     let fname = req.body.fname;
@@ -101,7 +102,7 @@ router.post("/register", async (req, res) => {
     console.log(error.message);
   }
 });
-
+//route to create a class
 router.post("/CreateClass", async (req, res) => {
   try {
     let cohort = req.body.cohort;
@@ -145,7 +146,7 @@ router.post("/CreateClass", async (req, res) => {
     console.log(error.message);
   }
 });
-
+//route to get the signed volunteers by ID
 router.get("/signed_volunteers/:lessonId", async (req, res) => {
   try {
     let lesson_id = req.params.lessonId;
@@ -163,7 +164,7 @@ router.get("/signed_volunteers/:lessonId", async (req, res) => {
     console.log(error.message);
   }
 });
-
+//route to sign up for class as volunteer
 router.post("/signed_volunteers", async (req, res) => {
   try {
     let role = req.body.role;
@@ -180,7 +181,7 @@ router.post("/signed_volunteers", async (req, res) => {
     console.log(error.message);
   }
 });
-
+//route to delete the lesson by ID
 router.get("/lesson/delete/:lessonId", async (req, res) => {
   try {
     let lesson_id = req.params.lessonId;

@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 
 const CreateRoles = () => {
+  //state variables are created
   const [cohort, setCohort] = useState("");
   const [module, setModule] = useState("");
   const [lesson, setLesson] = useState("");
@@ -24,6 +25,7 @@ const CreateRoles = () => {
     setPersonalDevelopmentQuantity,
   ] = useState("");
 
+  //function and validations logic implemented on create class button
   function SubmitButton() {
     if (
       !(leadTeacherQuantity < -1) &&

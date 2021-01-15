@@ -4,10 +4,9 @@ import { BrowserRouter } from "react-router-dom";
 
 import App from "./App";
 
-//ReactDOM.render(<App />, document.getElementById("root"));
 ReactDOM.render(
   <BrowserRouter>
-    <App /> {/* The various pages will be displayed by the `Main` component. */}
+    <App /> {/* Browser router added */}
   </BrowserRouter>,
   document.getElementById("root")
 );

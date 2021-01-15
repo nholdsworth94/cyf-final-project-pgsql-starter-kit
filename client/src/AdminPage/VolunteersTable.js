@@ -3,32 +3,32 @@ import moment from "moment";
 import { useEffect, useState } from "react";
 
 const VolunteersTable = ({ lessonId }) => {
+  //date format
   const currentDate = moment().format("DD MM YY");
-
+  //state variables created
   const [lessons, setLessons] = useState([]);
 
   useEffect(() => {
     fetchData();
   }, []);
-
+// fetch the api
   const fetchData = async () => {
     try {
       const response = await fetch(
         `https://cyf-finalproject-class-planner.herokuapp.com/api/signed_volunteers/${lessonId}`
       );
       const data = await response.json();
-      //console.log(data.data);
       setLessons(data.data);
     } catch (error) {
       console.log(error.message);
     }
   };
+  //all mail button logic
   let allMail = lessons.map((x) => x.email);
   let i = "";
   for (let a = 0; a < allMail.length; a++) {
     i += allMail[a] + ",";
   }
-  // console.log(i);
 
   return (
     <div className="ULPage">

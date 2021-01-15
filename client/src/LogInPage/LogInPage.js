@@ -6,14 +6,15 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 
 const LogInPage = () => {
+  //email validation function
   function validateEmail(email) {
     var re = /\S+@\S+\.\S+/;
     return re.test(email);
   }
-
+// state variables created
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
+// submit button logic and validation implemented
   function SubmitButton() {
     if (validateEmail(email) && password) {
       return (

@@ -1,7 +1,6 @@
 import React from "react";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
-import Home_Page from "../Images/Home_Page.jpg";
 import LogInButton from "../LoginButton/LogInButton";
 import RegisterButton from "../RegisterButton/RegisterButton";
 import { Link } from "react-router-dom";
