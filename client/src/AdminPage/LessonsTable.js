@@ -31,7 +31,8 @@ lesson:el.week_number,
 date:currentDate,
 time:`${el.starttime}-${el.endtime}`,
 module:el.module,
-link:el.syllabus_link }  }}><button type="button" className="nav_Home rolesBTN "  >View Details</button></Link></td>
+link:el.syllabus_link,
+cohort:el.cohort }  }}><button type="button" className="nav_Home rolesBTN "  >View Details</button></Link></td>
 <td><div className="d-none ">{deleteId=el.id}</div><form method="GET" target="hiddenFrame" action={`https://cyf-finalproject-class-planner.herokuapp.com/api/lesson/delete/${deleteId}`}>
  <button type="submit" value="submit" data-toggle="modal" data-target="#signUpModal" className="nav_Home AdminRolesBTN mx-1" >Delete Class</button>
   </form></td> 
