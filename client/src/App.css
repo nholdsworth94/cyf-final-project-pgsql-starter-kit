@@ -1,130 +1,127 @@
-
 .App {
-    font-family: sans-serif; 
+  font-family: sans-serif;
 }
-  
+
 .logo {
-    height: 56px;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    width: 178px;
-    box-sizing: content-box;
+  height: 56px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 178px;
+  box-sizing: content-box;
 }
 .navigation {
-    width: 100%;
-    height: 64px;
-    background-color: #EFEFEF ;
-    border: 0.5px solid #b3b3b3;
-    position: relative;
-    top:0px;
+  width: 100%;
+  height: 64px;
+  background-color: #efefef;
+  border: 0.5px solid #b3b3b3;
+  position: relative;
+  top: 0px;
 }
-.nav_Home{
-    display: inline;
-    background-color: #ea4548f5 ;
-    font-size: 16px;
-    cursor: pointer;
-    color: #ffffff;
-    text-align: center;
-    position: relative;
-    top: 5%;
-    margin-top: 10%;
-    padding: 0.4% 2% 0.4% 2%;
-    border: 1px solid#ea4548f5;
-    border-radius: 5px;
+.nav_Home {
+  display: inline;
+  background-color: #ea4548f5;
+  font-size: 16px;
+  cursor: pointer;
+  color: #ffffff;
+  text-align: center;
+  position: relative;
+  top: 5%;
+  margin-top: 10%;
+  padding: 0.4% 2% 0.4% 2%;
+  border: 1px solid#ea4548f5;
+  border-radius: 5px;
 }
-.nav_Home:hover{
-    background-color: rgb(251, 50, 35);
-     border: 1px solid rgb(253, 164, 164);
+.nav_Home:hover {
+  background-color: rgb(251, 50, 35);
+  border: 1px solid rgb(253, 164, 164);
 }
-.nav_Home:active{
-    background-color: rgb(251, 50, 35);
-    border: 1px solid white;
+.nav_Home:active {
+  background-color: rgb(251, 50, 35);
+  border: 1px solid white;
 }
 
 .nav_logIn {
-    position:relative;
-    top: -70px;
-    left : 88%;
-    margin: 1.5%;
+  position: relative;
+  top: -70px;
+  left: 88%;
+  margin: 1.5%;
 }
 .nav_register {
-    position:relative;
-    top: -46px;
-    left : 78%;
+  position: relative;
+  top: -46px;
+  left: 78%;
 }
 
 .footer {
-    background: #EFEFEF;
-    height: 40px;
-    width: 100%;
-    position: fixed;
-    margin-top: 50px;
-    bottom: 0;
-    text-align: center;
-    border: 0.5px solid #b3b3b3;
-    font-size: 12px;
-    padding: 2.5px;
-    
+  background: #efefef;
+  height: 40px;
+  width: 100%;
+  position: fixed;
+  margin-top: 50px;
+  bottom: 0;
+  text-align: center;
+  border: 0.5px solid #b3b3b3;
+  font-size: 12px;
+  padding: 2.5px;
 }
 .footer a:first-of-type {
-    color :tomato;
-    text-decoration: underline;
-    font-weight: 700;
-    
+  color: tomato;
+  text-decoration: underline;
+  font-weight: 700;
 }
-.footer a:nth-child(3), a:nth-child(4) ,a:nth-child(5), a:nth-child(6) {
-  letter-spacing: 6px;   
+.footer a:nth-child(3),
+a:nth-child(4),
+a:nth-child(5),
+a:nth-child(6) {
+  letter-spacing: 6px;
   text-decoration: dotted;
   position: relative;
   font-size: 20px;
 }
 
-
-.titleLP{
-    box-sizing: border-box;
-    color: rgb(255, 255, 255);
-    font-family: Raleway, sans-serif;
-    font-size: 280%;
-    font-style: normal;
-    font-weight: 700;
-    letter-spacing: normal;
-    line-height: 180%;
-    height: 100%;
-    width: 100%;
-    position: relative;
-    padding-left: 10%;  
-    text-decoration: underline#ea4548f5;
+.titleLP {
+  box-sizing: border-box;
+  color: rgb(255, 255, 255);
+  font-family: Raleway, sans-serif;
+  font-size: 280%;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: normal;
+  line-height: 180%;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  padding-left: 10%;
+  text-decoration: underline#ea4548f5;
 }
 .mainTitleLP {
-    width: 50%;
+  width: 50%;
 }
-.subTitleLP{
-    font-size: 180%;
-    font-family: Raleway, sans-serif;
-    line-height: 150%;
-    font-style: normal;
-    position: relative;
-    color: rgb(255, 255, 255);
-    top: 60%;
-    padding-left: 10%;
-    padding-top: 4%;
-    width: 40%;
-}
-
-.imageLP{
-    height: 250%;
-    width: 30%;
-    position: absolute;
-    left: 60%;
-    top: -20%;
-}
-a:link{
-  text-decoration: none!important;
+.subTitleLP {
+  font-size: 180%;
+  font-family: Raleway, sans-serif;
+  line-height: 150%;
+  font-style: normal;
+  position: relative;
+  color: rgb(255, 255, 255);
+  top: 60%;
+  padding-left: 10%;
+  padding-top: 4%;
+  width: 40%;
 }
 
-
+.imageLP {
+  height: 250%;
+  width: 30%;
+  position: absolute;
+  left: 60%;
+  top: -20%;
+}
+a:link {
+  text-decoration: none !important;
+}
 
 .form {
   position: relative;
@@ -140,7 +137,7 @@ a:link{
   border: 0;
   margin: 0 0 8px;
   padding: 8px;
-  border: 0.5px solid black ;
+  border: 0.5px solid black;
   border-radius: 5px;
   box-sizing: border-box;
   font-size: 14px;
@@ -152,7 +149,7 @@ a:link{
   border: 0;
   padding: 8px;
   border-radius: 5px;
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 14px;
   cursor: pointer;
 }
@@ -162,7 +159,7 @@ a:link{
   font-size: 12px;
 }
 .form .message a {
-  color: #EF3B3A;
+  color: #ef3b3a;
   text-decoration: none;
 }
 
@@ -177,76 +174,74 @@ a:link{
   text-align: center;
 }
 
-.messageForgot{
-    text-align: left;
+.messageForgot {
+  text-align: left;
 }
 
-.ULPage{
-    width:80%;
-    margin-left:10%;
-    margin-right: 10%;
-    margin-top: 0;
-    margin-bottom: 0;
-    text-align: center;
+.ULPage {
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: center;
 }
 
-div h3{
-    margin: 1%;
+div h3 {
+  margin: 1%;
 }
 
 div h4 {
-    margin: 1%;
+  margin: 1%;
 }
 
 tr {
-width: 100%;
-display: inline-table;
-table-layout: fixed;
-border-radius: 30px;
-background-color: b3b3b3;
-margin: 1px;
-
+  width: 100%;
+  display: inline-table;
+  table-layout: fixed;
+  border-radius: 30px;
+  background-color: b3b3b3;
+  margin: 1px;
 }
 thead tr {
-    width: 102.5%;
-    background-color: gray;
-    border-radius: 0px;
+  width: 102.5%;
+  background-color: gray;
+  border-radius: 0px;
 }
 
-thead :nth-child(2){
-    text-align: left;
-    position: relative;
-    left: -10px;
+thead :nth-child(2) {
+  text-align: left;
+  position: relative;
+  left: -10px;
 }
 
-thead :nth-child(3){
-    text-align: left;
-    position: relative;
-    left: -15px;
+thead :nth-child(3) {
+  text-align: left;
+  position: relative;
+  left: -15px;
 }
-thead :nth-child(4){
-    text-align: left;
-    position: relative;
-    left: -15px;
-}
-
-
-th{
-    padding: 10px;
-    color: white;
+thead :nth-child(4) {
+  text-align: left;
+  position: relative;
+  left: -15px;
 }
 
-tbody tr{
-    background-color: #EFEFEF;
+th {
+  padding: 10px;
+  color: white;
 }
 
-table{
- height:50vh;              
+tbody tr {
+  background-color: #efefef;
 }
-tbody{
+
+table {
+  height: 50vh;
+}
+tbody {
   padding: 5px;
-  overflow-y: scroll;    
-  overflow-x: hidden;             
+  overflow-y: scroll;
+  overflow-x: hidden;
   width: 82%;
   position: absolute;
   font-weight: 500;
@@ -254,122 +249,130 @@ tbody{
   text-align: left;
 }
 tbody tr :first-child {
-   text-align: left;
-   padding-left: 30px;
+  text-align: left;
+  padding-left: 30px;
 }
 thead tr :first-child {
-   text-align: left;
-   padding-left: 40px;
+  text-align: left;
+  padding-left: 40px;
 }
- 
 
-.firstRow tr:first-child  {
-    background-color: rgb(226, 250, 202);
+.firstRow tr:first-child {
+  background-color: rgb(226, 250, 202);
 }
 .firstRow tr:first-of-type:hover {
-    background-color: rgb(255, 232, 232);
-    border-radius: 30px;
-    cursor: pointer;
+  background-color: rgb(255, 232, 232);
+  border-radius: 30px;
+  cursor: pointer;
 }
 
- 
-tbody tr:hover{
-    background-color:rgb(255, 232, 232);
-    border-radius: 30px;
-    cursor: pointer;
+tbody tr:hover {
+  background-color: rgb(255, 232, 232);
+  border-radius: 30px;
+  cursor: pointer;
 }
 
-.rolesBTN{
-    margin:3px;
-    position: relative;
-    left: -50px;
-    padding-right: 30px;
+.rolesBTN {
+  margin: 3px;
+  position: relative;
+  left: -50px;
+  padding-right: 30px;
 }
 
-.createClass{
-    position: relative;
-    left:53%;
-    top: 40px;
+.createClass {
+  position: relative;
+  left: 53%;
+  top: 40px;
 }
 
 .imgAdmin {
-    position: relative;
-    left:35%;
-    width: 25%;
-    height: 20%;
-    margin-bottom: 0;
-    padding-bottom: 0;
+  position: relative;
+  left: 35%;
+  width: 25%;
+  height: 20%;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
-.clear { clear: both; height: 60px; }
-
-.envelopeSize{
-    font-size: 20px;
-   
-}
-.envelopeSize:hover{
-    color: blue;
+.clear {
+  clear: both;
+  height: 60px;
 }
 
-.envelopeSizeAlone{
-    font-size: 20px;
-    color:white;
-   
+.envelopeSize {
+  font-size: 20px;
 }
-.envelopeSizeAlone:hover{
-    color: royalblue;
+.envelopeSize:hover {
+  color: blue;
 }
 
-.AdminRolesBTN{
-    position: relative;
-    right:20px;
-    bottom:8px;
-    padding-right: 30px;
+.envelopeSizeAlone {
+  font-size: 20px;
+  color: white;
+}
+.envelopeSizeAlone:hover {
+  color: royalblue;
 }
 
-.hide { position:absolute; top:-1px; left:-1px; width:1px; height:1px; }
+.AdminRolesBTN {
+  position: relative;
+  right: 20px;
+  bottom: 8px;
+  padding-right: 30px;
+}
 
-
+.hide {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 1px;
+  height: 1px;
+}
 
 .backgroundImage {
-    opacity: 1;
-    
-    background-image:linear-gradient(to bottom, rgba(51, 48, 48, 0.52), rgba(58, 57, 57, 0.73)), url('/client/src/Images/hompage.jpg');
-    background-position: center;
+  opacity: 1;
+
+  background-image: linear-gradient(
+      to bottom,
+      rgba(51, 48, 48, 0.52),
+      rgba(58, 57, 57, 0.73)
+    ),
+    url("/client/src/Images/hompage.jpg");
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
 }
 
-.lt{
-    position:relative;
-    left:+126px;
+.lt {
+  position: relative;
+  left: +126px;
 }
-.alt{
-    position:relative;
-    left:+56px;
+.alt {
+  position: relative;
+  left: +56px;
 }
-.ta{
-    position:relative;
-    left:+90px;
+.ta {
+  position: relative;
+  left: +90px;
 }
-.c{
-    position:relative;
-    left:+144px;
+.c {
+  position: relative;
+  left: +144px;
 }
-.zm{
-    position:relative;
-    left:+85px;
+.zm {
+  position: relative;
+  left: +85px;
 }
 
-.pd{
-    position:relative;
-    left:+28px;
+.pd {
+  position: relative;
+  left: +28px;
 }
-.vl{
-    position: relative;
-    left:+71vw;
+.vl {
+  position: relative;
+  left: +71vw;
 }
-.vr{
-    position: relative;
-    left:+31vw;
+.vr {
+  position: relative;
+  left: +31vw;
 }
