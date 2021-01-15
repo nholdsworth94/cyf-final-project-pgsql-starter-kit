@@ -28,11 +28,14 @@ const LessonPage = () => {
     let zoomMaster=useLocation().state.zoomMaster;
     let personalDevelopment=useLocation().state.personalDevelopment;
     
+
+ 
+    
     return (
         <div className="App">
             <Header />
             <LessonPage_Info lessonId={lessonId} lesson={lesson} module={module} time={time} date={date} link={link} cohort={cohort}/>
-            <AvailableRoles lessonId={lessonId} leadTeacher={leadTeacher} assistantLeadTeacher={assistantLeadTeacher}
+            <AvailableRoles lessonId={lessonId} leadTeacher={leadTeacher} assistantLeadTeacher={assistantLeadTeacher } 
             teachingAssistant={teachingAssistant} coordinator={coordinator} zoomMaster={zoomMaster} personalDevelopment={personalDevelopment}/>
             <LessonPage_Volunteers lessonId={lessonId} />
             <div className="clear"></div>
