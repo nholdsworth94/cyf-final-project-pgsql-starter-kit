@@ -17,7 +17,7 @@ const UpcomingLessons =({RolesButtonHandler})=>{
 		try {
 			const response = await fetch('https://cyf-finalproject-class-planner.herokuapp.com/api/lesson');
 			const data = await response.json();
-			console.log(data.data);
+		//	console.log(data.data);
 			setLessons(data.data);
 		} catch (error) {
 			console.log(error.message);
@@ -41,7 +41,7 @@ const UpcomingLessons =({RolesButtonHandler})=>{
       <th></th>
     </tr>
   </thead>
-  <tbody className="firstRow">
+  <tbody className="firstRow" >
     {lessons.map(el =>
   
 <LessonsTable el={el} />
