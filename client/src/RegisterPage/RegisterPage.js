@@ -49,9 +49,10 @@ const RegisterPage = () => {
  <SubmitButton/>
  
   </form>
-  <Link to="/LogInPage">
-    <p className="message">Already on CodeYourFuture? <a href="#">Log In</a></p>
-    </Link>
+  
+    <p className="message">Already on CodeYourFuture? <span><Link to="/LogInPage"> Log In
+    </Link></span></p>
+    
 
 
 
@@ -59,27 +60,27 @@ const RegisterPage = () => {
 </div>
 
 
-<div class="modal" tabindex="-1" role="dialog" id="signUpModal">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title">Register</h5>
+<div className="modal" tabIndex="-1" role="dialog" id="signUpModal">
+        <div className="modal-dialog" role="document">
+          <div className="modal-content">
+            <div className="modal-header">
+              <h5 className="modal-title">Register</h5>
               <button
                 type="button"
-                class="close"
+                className="close"
                 data-dismiss="modal"
                 aria-label="Close"
               >
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
-            <div class="modal-body">
+            <div className="modal-body">
               You have successfully registered. Thanks
             </div>
-            <div class="modal-footer">
+            <div className="modal-footer">
                 <button
                 type="button"
-                class="btn btn-success"
+                className="btn btn-success"
                 data-dismiss="modal"
                 onClick={()=>window.location.reload()}
               >
