@@ -89,20 +89,20 @@ const CreateRoles = () =>{
   <div className="form-inline ">
              
   <div className="form-group ml-2 ">
-    <label for="staticEmail2" className="m-1">Date</label>
+    <label className="m-1">Date</label>
     <input type="date" className="form-control col-12" name="date" value={date} onChange={ e => setDate(e.target.value)} required/>
   </div>
   <div className="form-group ml-5  ">
-    <label for="staticEmail2" className="m-1">Material</label>
+    <label  className="m-1">Material</label>
     <input type="text" className="form-control col-11" name="material" value={material} onChange={ e => setMaterial(e.target.value)} placeholder="Material" required/>
   </div>
   <div className="form-group  col-2">
-    <label for="staticEmail2" className="m-1">Start Time</label>
+    <label  className="m-1">Start Time</label>
     <input type="time" className="form-control col-12" name="startTime"  placeholder="Start Time" defaultValue="11:00" required/>
   
   </div>
   <div className="form-group   col-2">
-    <label for="staticEmail2" className="m-1">End Time</label>
+    <label  className="m-1">End Time</label>
     <input type="time" className="form-control col-12" name="endTime"  placeholder="End Time" defaultValue="17:00" required/>
   </div>
   </div>
@@ -111,16 +111,16 @@ const CreateRoles = () =>{
   
       <div className="col-5 ">
                 <div className="form-check ">
-   <label className="form-check-label col-7" for="inlineRadio1">Lead Teacher</label>
+   <label className="form-check-label col-7" >Lead Teacher</label>
     
   <input className=" col-4" type="number"  name="leadTeacherQuantity" value={leadTeacherQuantity} onChange={ e => setLeadTeacherQuantity(e.target.value)} min="0" max="10" placeholder="" required></input>
 </div>
       <div className="form-check">
-  <label className="form-check-label col-7" for="inlineRadio1">Assistant Lead Teacher</label>
+  <label className="form-check-label col-7" >Assistant Lead Teacher</label>
   <input className=" col-4" type="number"  name="assistantLeadTeacherQuantity" value={assistantLeadTeacherQuantity} onChange={ e => setAssistantLeadTeacherQuantity(e.target.value)} min="0" max="10" placeholder="" required></input>
 </div>
       <div className="form-check">
-  <label className="form-check-label col-7" for="inlineRadio1">Teaching Assistant</label>
+  <label className="form-check-label col-7" >Teaching Assistant</label>
   <input className=" col-4" type="number"  name="teachingAssistantQuantity" value={teachingAssistantQuantity} onChange={ e => setTeachingAssistantQuantity(e.target.value)} min="0" max="10" placeholder="" required></input>
 </div>
      
@@ -128,15 +128,15 @@ const CreateRoles = () =>{
 
  <div className="col-5">
    <div className="form-check">
-  <label className="form-check-label col-8" for="inlineRadio1">Coordinator</label>
+  <label className="form-check-label col-8" >Coordinator</label>
   <input className=" col-4" type="number"  name="coordinatorQuantity" value={coordinatorQuantity} onChange={ e => setCoordinatorQuantity(e.target.value)} min="0" max="10" placeholder="" required></input>
 </div>
  <div className="form-check">
-  <label className="form-check-label col-8" for="inlineRadio1">Zoom Master (Host)</label>
+  <label className="form-check-label col-8">Zoom Master (Host)</label>
   <input className=" col-4" type="number"  name="zoomMasterQuantity" value={zoomMasterQuantity} onChange={ e => setZoomMasterQuantity(e.target.value)} min="0" max="10" placeholder="" required></input>
 </div>
       <div className="form-check ">
-  <label className="form-check-label col-8" for="inlineRadio1">Personal Development Rep</label>
+  <label className="form-check-label col-8" >Personal Development Rep</label>
   <input className=" col-4" type="number"  name="personalDevelopmentQuantity" value={personalDevelopmentQuantity} onChange={ e => setPersonalDevelopmentQuantity(e.target.value)} min="0" max="10" placeholder="" required></input>
 </div>
       
@@ -150,27 +150,27 @@ const CreateRoles = () =>{
 
 
 
-<div class="modal" tabindex="-1" role="dialog" id="signUpModal">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title">Create Class</h5>
+<div className="modal" tabIndex="-1" role="dialog" id="signUpModal">
+        <div className="modal-dialog" role="document">
+          <div className="modal-content">
+            <div className="modal-header">
+              <h5 className="modal-title">Create Class</h5>
               <button
                 type="button"
-                class="close"
+                className="close"
                 data-dismiss="modal"
                 aria-label="Close"
               >
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
-            <div class="modal-body">
+            <div className="modal-body">
               You have successfully created the class. Thanks
             </div>
-            <div class="modal-footer">
+            <div className="modal-footer">
               <button
                 type="button"
-                class="btn btn-success"
+                className="btn btn-success"
                 data-dismiss="modal"
                 onClick={()=>window.location.reload()}
               >
