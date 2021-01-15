@@ -1,5 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 
 
@@ -29,7 +30,6 @@ const [lessons, setLessons] = useState([]);
               <div className="d-flex p-2 flex-wrap  mx-5 ">
             
       {lessons.map(el => 
-            
            <div className="d-inline-flex bg-light text-secondary p-1 justify-content-between col-4 mx-5 "><span className="text-dark"><strong>{el.role_id}</strong></span>{el.full_name}</div>
            )}
       </div>
