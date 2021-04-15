@@ -1,0 +1,15 @@
+{
+"lessons":[
+  {"id":"1","module":"JS Core 1", "Lesson":"Week1","Date":"12/12/2020","Time":"11:00-05:00","Available-roles":{"Lead Teacher":1,"Teaching Assistant":3,"Coordinator":2}},
+  {"id":"2","module":"JS Core 1", "Lesson":"Week2","Date":"19/12/2020","Time":"11:00-05:00","Available-roles":{"Lead Teacher":0,"Teaching Assistant":5,"Coordinator":2}},
+  {"id":"3","module":"JS Core 1", "Lesson":"Week3","Date":"26/12/2020","Time":"11:00-05:00","Available-roles":{"Lead Teacher":1,"Teaching Assistant":0,"Coordinator":1}},
+  {"id":"4","module":"JS Core 2", "Lesson":"Week4","Date":"03/01/2021","Time":"11:00-05:00","Available-roles":{"Lead Teacher":1,"Teaching Assistant":2,"Coordinator":1}},
+  {"id":"5","module":"JS Core 2", "Lesson":"Week5","Date":"10/01/2021","Time":"11:00-05:00","Available-roles":{"Lead Teacher":0,"Teaching Assistant":1,"Coordinator":0}},
+  {"id":"6","module":"JS Core 2", "Lesson":"Week6","Date":"17/01/2021","Time":"11:00-05:00","Available-roles":{"Lead Teacher":1,"Teaching Assistant":0,"Coordinator":1}},
+  {"id":"7","module":"JS Core 3", "Lesson":"Week7","Date":"24/01/2021","Time":"11:00-05:00","Available-roles":{"Lead Teacher":1,"Teaching Assistant":0,"Coordinator":0}},
+  {"id":"8","module":"JS Core 3", "Lesson":"Week8","Date":"01/02/2021","Time":"11:00-05:00","Available-roles":{"Lead Teacher":0,"Teaching Assistant":2,"Coordinator":0}},
+  {"id":"9","module":"JS Core 3", "Lesson":"Week9","Date":"09/02/2021","Time":"11:00-05:00","Available-roles":{"Lead Teacher":1,"Teaching Assistant":1,"Coordinator":0}},
+  {"id":"10","module":"React"   , "Lesson":"Week10","Date":"16/02/2021","Time":"11:00-05:00","Available-roles":{"Lead Teacher":1,"Teaching Assistant":0,"Coordinator":2}}
+ 
+]
+}

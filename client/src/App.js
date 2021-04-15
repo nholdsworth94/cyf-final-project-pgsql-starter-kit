@@ -1,10 +1,25 @@
 import React, { useEffect, useState } from "react";
 
 import "./App.css";
+
+// import bootstrap css file here
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 import { getMessage } from "./service";
 import logo from "./logo.svg";
-
+import UpcomingLessons from "./UpcomingLessons/UpcomingLessons";
+import LessonPage from "./LessonPage/LessonPage";
+import LandingPage from "./LandingPage/LandingPage";
+import LogInPage from "./LogInPage/LogInPage";
+import RegisterPage from "./RegisterPage/RegisterPage";
+import AdminPage from "./AdminPage/AdminPage";
+import VolunteersTable from "./AdminPage/VolunteersTable";
+import AvailableRoles from "./LessonPage/AvailableRoles";
+import CreateClassPage from "./AdminPage/CreateClassPage";
+import CreateRoles from "./AdminPage/CreateRoles";
+import Main from "./Main/Main";
 export function App() {
+
 	const [message, setMessage] = useState("Loading...");
 
 	useEffect(() => {
@@ -13,10 +28,12 @@ export function App() {
 
 	return (
 		<main role="main">
-			<div>
-				<img className="logo" data-qa="logo" src={logo} alt="Just the React logo" />
-				<h1 className="message" data-qa="message">{message}</h1>
+	<div>
+		
+        <Main/> 
+	  
 			</div>
+		
 		</main>
 	);
 }

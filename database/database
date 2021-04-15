@@ -1,0 +1,117 @@
+CREATE TABLE school (
+  id                SERIAL PRIMARY KEY,
+  name              VARCHAR(30) NOT NULL,
+  region            VARCHAR(120) NOT NULL
+);
+
+CREATE TABLE users (
+  id                SERIAL PRIMARY KEY,
+  first_name        VARCHAR(30) NOT NULL,
+  last_name         VARCHAR(30) NOT NULL,
+  email             VARCHAR(120) NOT NULL,
+  admin             VARCHAR(120) NOT NULL
+);
+
+CREATE TABLE cohort (
+  id                SERIAL PRIMARY KEY,
+  name              VARCHAR(30) NOT NULL,
+  start_date        DATE NOT NULL,
+  end_date          DATE NOT NULL, 
+  school_id         INT REFERENCES school(id),
+  created_by        INT REFERENCES users(id)
+);
+
+CREATE TABLE module (
+  id                SERIAL PRIMARY KEY,
+  name              VARCHAR(30) NOT NULL,
+  syllabus_link     VARCHAR(220) NOT NULL  
+);
+
+
+CREATE TABLE lesson (
+  id                SERIAL PRIMARY KEY,
+  week_number       VARCHAR(30) NOT NULL,
+  content           VARCHAR(220) NOT NULL,
+  syllabus_link     VARCHAR(220) NOT NULL,
+  module_id         INT REFERENCES module(id)
+);
+
+
+CREATE TABLE lesson_role (
+  id                SERIAL PRIMARY KEY,
+  name              VARCHAR(30) NOT NULL
+);
+
+CREATE TABLE lesson_role_link (
+  id                SERIAL PRIMARY KEY,
+  capacity          VARCHAR(30) NOT NULL,
+  lesson_id         INT REFERENCES lesson(id),
+  lesson_role_id    INT REFERENCES lesson_role(id)
+);
+
+CREATE TABLE cohort_lesson_link (
+  id                SERIAL PRIMARY KEY,
+  start_date        DATE NOT NULL,
+  end_date          DATE NOT NULL,
+  cohort_id         INT REFERENCES cohort(id),
+  lesson_id         INT REFERENCES lesson(id)
+);
+
+
+CREATE TABLE cohort_lesson_user_link (
+  id                SERIAL PRIMARY KEY,
+  cohort_id         INT REFERENCES cohort(id),
+  lesson_id         INT REFERENCES lesson(id),
+  users_id          INT REFERENCES users(id),
+  role_id           INT REFERENCES lesson_role(id)
+);
+
+
+
+/// all 9 database tables are created.
+
+//insert data into table school //independent table
+INSERT INTO school (name, region) VALUES ('Westmidlands class 1','Westmidlands');
+INSERT INTO school (name, region) VALUES ('London class 1','London');
+
+//insert data into table users //independent table
+INSERT INTO users (first_name, last_name, email, admin) VALUES ('Ali','Haider','alihaider@gmail.com','CodeYourFuture');
+
+//insert data into table module //independent table
+INSERT INTO module (name, syllabus_link) VALUES ('HTML-CSS','https://syllabus.codeyourfuture.io/html-css/index');
+ INSERT INTO module (name, syllabus_link) VALUES ('Intro To Coding','https://introtocoding.codeyourfuture.io');
+ INSERT INTO module (name, syllabus_link) VALUES ('Fundamentals Course','https://fundamentals.codeyourfuture.io');
+ INSERT INTO module (name, syllabus_link) VALUES ('JavaScript Core 1','https://syllabus.codeyourfuture.io/js-core-1/index');
+ INSERT INTO module (name, syllabus_link) VALUES ('JavaScript Core 2','https://syllabus.codeyourfuture.io/js-core-2/index');
+ INSERT INTO module (name, syllabus_link) VALUES ('JavaScript Core 3','https://syllabus.codeyourfuture.io/js-core-2/index');
+ INSERT INTO module (name, syllabus_link) VALUES ('React','https://syllabus.codeyourfuture.io/react/index');
+INSERT INTO module (name, syllabus_link) VALUES ('Node','https://syllabus.codeyourfuture.io/node/index');
+ INSERT INTO module (name, syllabus_link) VALUES ('SQL','https://syllabus.codeyourfuture.io/db/index');
+
+//insert data into lesson  //dependent table
+INSERT INTO lesson (week_number, content, syllabus_link , module_id ) VALUES ('Week-1','Semantic HTML tags, CSS selectors, CSS cascade, Pseudo-classes such as :hover/:focus, Box model: margin/padding/border etc...','https://syllabus.codeyourfuture.io/html-css/week-1/lesson', 1);
+INSERT INTO lesson (week_number, content, syllabus_link , module_id ) VALUES ('Week-2','Semantic HTML tags, CSS selectors, CSS cascade, Pseudo-classes such as :hover/:focus, Box model: margin/padding/border etc...','https://syllabus.codeyourfuture.io/html-css/week-1/lesson', 2);
+ INSERT INTO lesson (week_number, content, syllabus_link , module_id ) VALUES ('Week-3','Semantic HTML tags, CSS selectors, CSS cascade, Pseudo-classes such as :hover/:focus, Box model: margin/padding/border etc...','https://syllabus.codeyourfuture.io/html-css/week-1/lesson', 3);
+ INSERT INTO lesson (week_number, content, syllabus_link , module_id ) VALUES ('Week-1','Semantic HTML tags, CSS selectors, CSS cascade, Pseudo-classes such as :hover/:focus, Box model: margin/padding/border etc...','https://syllabus.codeyourfuture.io/html-css/week-1/lesson', 4);
+ INSERT INTO lesson (week_number, content, syllabus_link , module_id ) VALUES ('Week-2','Semantic HTML tags, CSS selectors, CSS cascade, Pseudo-classes such as :hover/:focus, Box model: margin/padding/border etc...','https://syllabus.codeyourfuture.io/html-css/week-1/lesson', 5);
+INSERT INTO lesson (week_number, content, syllabus_link , module_id ) VALUES ('Week-3','Semantic HTML tags, CSS selectors, CSS cascade, Pseudo-classes such as :hover/:focus, Box model: margin/padding/border etc...','https://syllabus.codeyourfuture.io/html-css/week-1/lesson', 6);
+ INSERT INTO lesson (week_number, content, syllabus_link , module_id ) VALUES ('Week-2','Semantic HTML tags, CSS selectors, CSS cascade, Pseudo-classes such as :hover/:focus, Box model: margin/padding/border etc...','https://syllabus.codeyourfuture.io/html-css/week-1/lesson', 7);
+ INSERT INTO lesson (week_number, content, syllabus_link , module_id ) VALUES ('Week-4','Semantic HTML tags, CSS selectors, CSS cascade, Pseudo-classes such as :hover/:focus, Box model: margin/padding/border etc...','https://syllabus.codeyourfuture.io/html-css/week-1/lesson', 8);
+ INSERT INTO lesson (week_number, content, syllabus_link , module_id ) VALUES ('Week-1','Semantic HTML tags, CSS selectors, CSS cascade, Pseudo-classes such as :hover/:focus, Box model: margin/padding/border etc...','https://syllabus.codeyourfuture.io/html-css/week-1/lesson', 9);
+
+//insert data into table lesson role  //independent table
+INSERT INTO lesson_role (name) VALUES ('Lead Teacher');
+INSERT INTO lesson_role (name) VALUES ('Assistant Teacher');
+
+//insert data into cohort //dependent table
+INSERT INTO cohort (name, start_date, end_date, school_id, created_by) VALUES ('cohort 1','2019/10/01','2020/08/01',1,1);
+
+//insert data into lesson role link //dependent table
+INSERT INTO lesson_role_link (capacity, lesson_id, lesson_role_id) VALUES ('5',1,1);
+
+//insert data into  cohort lesson link //dependent table
+INSERT INTO cohort_lesson_link (start_date, end_date, cohort_id, lesson_id) VALUES ('2019/10/01','2020/08/01',1,1);
+
+//insert data into  cohort lesson user link //dependent table
+INSERT INTO cohort_lesson_user_link (cohort_id, lesson_id, users_id, role_id) VALUES (1,1,1,1);
+

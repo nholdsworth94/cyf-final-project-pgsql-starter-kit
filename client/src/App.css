@@ -1,11 +1,290 @@
+
+.App {
+    font-family: sans-serif; 
+}
+  
 .logo {
-    width: 100px;
+    height: 56px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 178px;
+    box-sizing: content-box;
+}
+.navigation {
+    width: 100%;
+    height: 64px;
+    background-color: #EFEFEF ;
+    border: 0.5px solid #b3b3b3;
+    position: relative;
+    top:0px;
+}
+.nav_Home{
+    display: inline;
+    background-color: #ea4548f5 ;
+    font-size: 16px;
+    cursor: pointer;
+    color: #ffffff;
+    text-align: center;
+    position: relative;
+    top: 5%;
+    margin-top: 10%;
+    padding: 0.4% 2% 0.4% 2%;
+    border: 1px solid#ea4548f5;
+    border-radius: 5px;
+}
+.nav_Home:hover{
+    background-color: rgb(251, 50, 35);
+     border: 1px solid rgb(253, 164, 164);
+}
+.nav_Home:active{
+    background-color: rgb(251, 50, 35);
+    border: 1px solid white;
 }
 
-.message {
-    color: blue;
+.nav_logIn {
+    position:relative;
+    top: -70px;
+    left : 88%;
+    margin: 1.5%;
+}
+.nav_register {
+    position:relative;
+    top: -46px;
+    left : 78%;
 }
 
-.message:hover {
-    background-color: yellow;
+.footer {
+    background: #EFEFEF;
+    height: 40px;
+    width: 100%;
+    position: fixed;
+    margin-top: 50px;
+    bottom: 0;
+    text-align: center;
+    border: 0.5px solid #b3b3b3;
+    font-size: 12px;
+    padding: 2.5px;
+    
 }
+.footer a:first-of-type {
+    color :tomato;
+    text-decoration: underline;
+    font-weight: 700;
+    
+}
+.footer a:nth-child(3), a:nth-child(4) ,a:nth-child(5), a:nth-child(6) {
+  letter-spacing: 6px;   
+  text-decoration: dotted;
+  position: relative;
+  font-size: 20px;
+}
+
+
+.titleLP{
+    box-sizing: border-box;
+    color: rgb(51,51,51);
+    font-family: Raleway, sans-serif;
+    font-size: 280%;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: normal;
+    line-height: 180%;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    padding-left: 10%;  
+    text-decoration: underline#ea4548f5;
+}
+.mainTitleLP {
+    width: 50%;
+}
+.subTitleLP{
+    font-size: 180%;
+    font-family: Raleway, sans-serif;
+    line-height: 150%;
+    font-style: normal;
+    position: relative;
+    color: rgb(51,51,51);
+    top: 60%;
+    padding-left: 10%;
+    padding-top: 4%;
+    width: 40%;
+}
+
+.imageLP{
+    height: 250%;
+    width: 30%;
+    position: absolute;
+    left: 60%;
+    top: -20%;
+}
+a:link{
+  text-decoration: none!important;
+}
+
+
+
+.form {
+  position: relative;
+  max-width: 400px;
+  margin: -20px auto 40px;
+  padding: 5px;
+  text-align: center;
+}
+
+.form input {
+  outline: 0;
+  width: 100%;
+  border: 0;
+  margin: 0 0 8px;
+  padding: 8px;
+  border: 0.5px solid black ;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.form button {
+  outline: 0;
+  background: #ea4548f5;
+  width: 100%;
+  border: 0;
+  padding: 8px;
+  border-radius: 5px;
+  color: #FFFFFF;
+  font-size: 14px;
+  cursor: pointer;
+}
+.form .message {
+  margin: 10px 0 0 0;
+  color: #797979;
+  font-size: 12px;
+}
+.form .message a {
+  color: #EF3B3A;
+  text-decoration: none;
+}
+
+.container {
+  position: relative;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.container .info {
+  margin: 50px auto;
+  text-align: center;
+}
+
+.messageForgot{
+    text-align: left;
+}
+
+.ULPage{
+    width:80%;
+    margin-left:10%;
+    margin-right: 10%;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+div h3{
+    margin: 1%;
+}
+
+div h4 {
+    margin: 1%;
+}
+
+tr {
+width: 100%;
+display: inline-table;
+table-layout: fixed;
+border-radius: 30px;
+background-color: b3b3b3;
+margin: 1px;
+
+}
+thead tr {
+    width: 102.5%;
+    background-color: gray;
+    border-radius: 0px;
+}
+
+thead :nth-child(3){
+    padding-left: 48px;
+    text-align: left;
+}
+thead :nth-child(4){
+    padding-left: 45px;
+    text-align: left;
+}
+thead :nth-child(5){
+    padding-left: 40px;
+    text-align: left;
+}
+
+th{
+    padding: 10px;
+    color: white;
+}
+
+tbody tr{
+    background-color: #EFEFEF;
+}
+
+table{
+ height:50vh;              
+}
+ tbody{
+  padding: 5px;
+    overflow-y: scroll;   
+   overflow-x: hidden;            
+  width: 82%;
+  /* position: absolute; */
+  font-weight: 500;
+  height: 50vh;
+} 
+tbody tr :first-child {
+   text-align: center;
+}
+thead tr :first-child {
+   text-align: center;
+}
+.firstRow tr:first-child  {
+    background-color: rgb(226, 250, 202);
+}
+.firstRow tr:first-of-type:hover {
+    background-color: skyblue;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+ 
+tbody tr:hover{
+    background-color: skyblue;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.rolesBTN{
+    margin:3px;
+}
+
+.createClass{
+    position: relative;
+    left:53%;
+    top: 40px;
+}
+
+.imgAdmin {
+    position: relative;
+    left:35%;
+    width: 25%;
+    height: 20%;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
